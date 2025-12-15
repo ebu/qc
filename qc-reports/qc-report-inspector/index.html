@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EBU QC Report inspector &ndash; EXPERIMENTAL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="col-lg-8 mx-auto p-4 py-md-5">
+        <header class="d-flex align-items-center pb-3 mb-4 border-bottom">
+            <div class="d-flex align-items-center">
+                <span class="fs-4">EBU QC Report inspector &ndash; EXPERIMENTAL</span>
+            </div>
+        </header>
+
+
+        <div class="alert alert-danger"><strong>⚠️WARNING!⚠️</strong> <br/> This is a very basic tool for inspecting EBU QC Reports. It is not feature complete and should only be used for demonstration purposes. Data presented using this tool may not reflect the contents present in the input document. The validation results should not be taken as authoritative. </div>
+        <div class="alert alert-info">Designed for use in Chrome</div>
+
+        <main>
+            <div class="card">
+                <div class="card-body">
+                    <p style="margin-bottom: 0">This tool loads an EBU QC Report XML file and demonstrates the benefits of using this format, such as:</p>
+                    <ul>
+                        <li>A custom view can be created for each workflow role that shows only the required details</li>
+                        <li>QC Reports from all QC tools are presented uniformly</li>
+                    </ul>
+                    <button id="open_report_button" type="button" class="btn btn-outline-secondary" disabled>Open report</button>
+                </div>
+            </div>
+
+            <div id="validation-output" class="alert alert-info d-none"></div>
+            <div id="results" class="d-none pt-4 bd-example m-0 border-0">
+
+            </div>
+
+        </main>
+    </div>
+    <div class="modal fade" id="ToolInformationModal" tabindex="-1" aria-labelledby="ToolInformationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="ToolInformationModalLabel">Tool Information</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="TIM-a" class="col-form-label">Tool ID:</label>
+                        <input type="text" class="form-control" id="TIM-a" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="TIM-b" class="col-form-label">Tool Name:</label>
+                        <input type="text" class="form-control" id="TIM-b" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="TIM-c" class="col-form-label">Vendor:</label>
+                        <input type="text" class="form-control" id="TIM-c" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="TIM-d" class="col-form-label">URL:</label>
+                        <input type="text" class="form-control" id="TIM-d" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="TIM-e" class="col-form-label">Version:</label>
+                        <input type="text" class="form-control" id="TIM-e" readonly>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <template id="template-report-tool-info-button"><button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#ToolInformationModal">🛠 Tool used to create Report</button></template>
+    <template id="template-item-tool-info-button"><button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#ToolInformationModal">🛠 Tool used for Item analysis</button></template>
+    <template id="template-results-nav">
+        <nav>
+            <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="nav-1-tab" data-bs-toggle="tab" data-bs-target="#nav-1"
+                    type="button" role="tab" aria-controls="nav-1" aria-selected="true">Delivery Operator</button>
+                <button class="nav-link" id="nav-2-tab" data-bs-toggle="tab" data-bs-target="#nav-2" type="button"
+                    role="tab" aria-controls="nav-2" aria-selected="false" tabindex="-1">QC inspector</button>
+                <button class="nav-link" id="nav-3-tab" data-bs-toggle="tab" data-bs-target="#nav-3" type="button"
+                    role="tab" aria-controls="nav-3" aria-selected="false" tabindex="-1">Engineer</button>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane active show" id="nav-1" role="tabpanel" aria-labelledby="nav-1-tab">
+
+            </div>
+            <div class="tab-pane" id="nav-2" role="tabpanel" aria-labelledby="nav-2-tab">
+
+            </div>
+            <div class="tab-pane" id="nav-3" role="tabpanel" aria-labelledby="nav-3-tab">
+
+            </div>
+        </div>
+    </template>
+    <template id="template-dropdown">
+        <div class="dropdown pb-3">
+            <button class="btn btn-outline-secondary dropdown-toggle btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Error locations
+            </button>
+            <ul class="dropdown-menu">
+            </ul>
+        </div>
+    </template>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="report.js" type="module"></script>
+</body>
+
+</html>

@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:qc="tag:ebu.ch,2017:ns:imf:qc:1.0"
-	elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns:qc="tag:qc.ebu.ch,2026-01"
+		   xmlns:qcc="tag:catalogue.qc.ebu.ch,2026-01"
+		   targetNamespace="tag:catalogue.qc.ebu.ch,2026-01"
+		   elementFormDefault="qualified">
 	<!-- API structures -->
-	<xs:import namespace="tag:ebu.ch,2017:ns:imf:qc:1.0" schemaLocation="qc.xsd"/>
+	<xs:import namespace="tag:qc.ebu.ch,2026-01" schemaLocation="../qc-data-model/qc.xsd"/>
 	<xs:element name="Items">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element maxOccurs="unbounded" minOccurs="0" ref="ItemInfo"/>
+				<xs:element maxOccurs="unbounded" minOccurs="0" ref="qcc:ItemInfo"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -31,8 +34,8 @@
 							<xs:element name="Line2" type="xs:string"/>
 							<xs:element name="Line3" type="xs:string"/>
 							<xs:element name="Line4" type="xs:string"/>
-							<xs:element name="Icon" type="ImageSourcesType"> </xs:element>
-							<xs:element name="FullImage" type="ImageSourcesType"/>
+							<xs:element name="Icon" type="qcc:ImageSourcesType" />
+							<xs:element name="FullImage" type="qcc:ImageSourcesType"/>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
