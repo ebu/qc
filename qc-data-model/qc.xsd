@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:qc="tag:ebu.ch,2017:ns:imf:qc:1.0"
+	targetNamespace="tag:ebu.ch,2017:ns:imf:qc:1.0" elementFormDefault="qualified">
+	<xs:annotation>
+		<xs:documentation>Classes</xs:documentation>
+	</xs:annotation>
+	<xs:element name="Report" type="qc:QCReportType"/>
+	<xs:element name="Profile" type="qc:QCProfileType"/>
+	<xs:element name="Item" type="qc:QCItemType"/>
+	<xs:element name="ItemResult" type="qc:QCItemResultType"/>
+	<xs:element name="ItemDefinition" type="qc:QCItemDefinitionType"/>
+	<xs:complexType name="QCRequestType">
+		<xs:sequence>
+			<xs:element name="ID" type="qc:UUIDType"/>
+			<xs:element name="Profiles">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element maxOccurs="unbounded" ref="qc:Profile"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>Class Definitions</xs:documentation>
+	</xs:annotation>
+	<xs:complexType name="QCReportType">
+		<xs:sequence>
+			<xs:element name="ReportId" type="qc:UUIDType"/>
+			<xs:element minOccurs="0" name="ReportCreator" type="qc:OperatorType"/>
+			<xs:element name="ExecutionStatus" type="qc:ExecutionStatusType"/>
+			<xs:element name="ErrorDescription" type="xs:string" minOccurs="0"/>
+			<xs:element name="CheckResult" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="ContentId">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element maxOccurs="unbounded" name="ContentIdentifier"
+							type="qc:ContentIdentifierType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="LastModifiedDateTime" type="xs:dateTime"/>
+			<xs:element name="ReportGroupId" type="xs:string" minOccurs="0"/>
+			<xs:element name="OverallAnalysisDuration" type="xs:duration" minOccurs="0"/>
+			<xs:element name="ToolInformation" type="qc:ToolInformationType" minOccurs="0"/>
+			<xs:element name="Profile" type="qc:QCProfileType"/>
+			<xs:element name="ItemResults">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="qc:ItemResult" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QCProfileType">
+		<xs:sequence>
+			<xs:element name="ID" type="qc:UUIDType"/>
+			<xs:element name="Name" type="xs:string" minOccurs="0"/>
+			<xs:element name="ContentId">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element maxOccurs="unbounded" name="ContentIdentifier"
+							type="qc:ContentIdentifierType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="CheckResultRule" type="qc:RuleType" minOccurs="0"/>
+			<xs:element name="Description" type="xs:string" minOccurs="0"/>
+			<xs:element name="Scopes">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Scope" type="qc:LocatorType" minOccurs="0"
+							maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" name="Requestor" type="qc:OperatorType"/>
+			<xs:element minOccurs="0" name="DueDate" type="xs:dateTime"/>
+			<xs:element name="RelevanceLevel" type="qc:RelevanceType" minOccurs="0"/>
+			<xs:element name="Items">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="qc:Item" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ItemDefinitions">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="qc:ItemDefinition" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QCItemType">
+		<xs:sequence>
+			<xs:element name="EBUQCID" type="qc:EBUQCIDType"/>
+			<xs:element name="EBUQCName" type="xs:string" minOccurs="0"/>
+			<xs:element name="EBUQCVersion" type="qc:EBUQCVersionType"/>
+			<xs:element name="InstanceId" type="qc:UUIDType" minOccurs="0"/>
+			<xs:element name="Relevance" type="qc:RelevanceType" minOccurs="0"/>
+			<xs:element name="UsedAs" type="qc:UsableAsType" minOccurs="0"/>
+			<xs:element minOccurs="0" name="Track" type="xs:string"/>
+			<xs:element name="Scopes">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Scope" type="qc:LocatorType" minOccurs="0"
+							maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Inputs">
+				<xs:complexType>
+					<xs:choice minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="Input" type="qc:QCItemInputValueType"/>
+						<xs:element name="Group" type="qc:QCItemInputGroupType"/>
+						<xs:any namespace="##other" processContents="lax"/>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QCItemResultType">
+		<xs:sequence>
+			<xs:element name="EBUQCID" type="qc:EBUQCIDType"/>
+			<xs:element name="EBUQCName" type="xs:string" minOccurs="0"/>
+			<xs:element name="EBUQCVersion" type="qc:EBUQCVersionType"/>
+			<xs:element name="InstanceId" type="qc:UUIDType" minOccurs="0"/>
+			<xs:element name="AnalysisMethodUsed" type="qc:AnalysisMethodType"/>
+			<xs:element name="ExecutionStatus" type="qc:ExecutionStatusType"/>
+			<xs:element name="ErrorDescription" type="xs:string" minOccurs="0"/>
+			<xs:element name="CheckResult" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="ResultDescription" type="xs:string" minOccurs="0"/>
+			<xs:element name="ToolInformation" type="qc:ToolInformationType" minOccurs="0"/>
+			<xs:element name="Annotation" type="qc:AnnotationType" minOccurs="0"/>
+			<xs:element name="Relevance" type="qc:RelevanceType" minOccurs="0"/>
+			<xs:element name="MaxSeverity" type="qc:SeverityType" minOccurs="0"/>
+			<xs:element name="VerificationMedia" type="xs:anyURI" minOccurs="0"/>
+			<xs:element name="DetectionMethod" type="qc:DetectionMethodType" minOccurs="0"/>
+			<xs:element name="Revision" type="xs:nonNegativeInteger" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CreationDateTime" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="Operator" type="qc:OperatorType" minOccurs="0"/>
+			<xs:element name="Outputs">
+				<xs:complexType>
+					<xs:choice minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="Output" type="qc:QCItemOutputValueType"/>
+						<xs:element name="Group" type="qc:QCItemOutputGroupType"/>
+						<xs:any namespace="##other" processContents="lax"/>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QCItemDefinitionType">
+		<xs:sequence>
+			<xs:element name="EBUQCID" type="qc:EBUQCIDType"/>
+			<xs:element name="EBUQCName" type="xs:string"/>
+			<xs:element name="EBUQCVersion" type="qc:EBUQCVersionType"/>
+			<xs:element name="Status" type="qc:PublicationStatusType"/>
+			<xs:element name="UsableAs">
+				<xs:simpleType>
+					<xs:restriction>
+						<xs:simpleType>
+							<xs:list itemType="qc:UsableAsType"/>
+						</xs:simpleType>
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="AnalysisMethod" type="qc:AnalysisMethodType"> </xs:element>
+			<xs:element name="Description" type="xs:string" minOccurs="0"/>
+			<xs:element name="Definition" type="xs:string"/>
+			<xs:element name="Remarks" type="xs:string" minOccurs="0"/>
+			<xs:element name="Layer" type="qc:LayerType"/>
+
+
+			<xs:element name="Category" type="qc:CategoryType"/>
+
+			<xs:element name="EssenceType" type="qc:EssenceType"/>
+
+
+			<xs:element name="Aliases" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Alias" type="xs:string" minOccurs="0"
+							maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Tags" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Tag" type="xs:string" minOccurs="0" maxOccurs="unbounded"
+						/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="References" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Reference" type="qc:ReferenceType" minOccurs="0"
+							maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Examples" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Example" type="qc:ExampleType" minOccurs="0"
+							maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Inputs">
+				<xs:complexType>
+					<xs:choice minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="Input" type="qc:QCItemInputValueDefinitionType"/>
+						<xs:element name="Group" type="qc:QCItemInputGroupDefinitionType"/>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Outputs">
+				<xs:complexType>
+					<xs:choice minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="Output" type="qc:QCItemOutputValueDefinitionType"/>
+						<xs:element name="Group" type="qc:QCItemOutputGroupDefinitionType"/>
+						<xs:any namespace="##other" processContents="lax"/>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QCItemInputType" abstract="true">
+		<xs:sequence>
+			<xs:element name="Name" type="qc:EBUQCIDType"/>
+			<xs:element name="Locator" type="qc:LocatorType" minOccurs="0"/>
+			<xs:element name="Track" type="xs:string" minOccurs="0"/>
+			<xs:element name="WrapperLocation" type="xs:string" minOccurs="0"/>
+			<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QCItemInputValueType">
+		<xs:complexContent>
+			<xs:extension base="qc:QCItemInputType">
+				<xs:sequence>
+					<xs:element name="Value" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="QCItemInputGroupType">
+		<xs:complexContent>
+			<xs:extension base="qc:QCItemInputType">
+				<xs:sequence>
+					<xs:element name="Input" type="qc:QCItemInputValueType" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="QCItemInputDefinitionType" abstract="true">
+		<xs:sequence>
+			<xs:element name="Name" type="qc:EBUQCIDType"/>
+			<xs:element name="Description" type="xs:string"/>
+			<xs:element name="Remarks" type="xs:string" minOccurs="0"/>
+			<xs:element name="HasLocator" type="xs:boolean" default="false"/>
+			<xs:element name="InReports" type="qc:CardinalityType"/>
+			<xs:element name="InChecks" type="qc:CardinalityType"/>
+			<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QCItemInputValueDefinitionType">
+		<xs:complexContent>
+			<xs:extension base="qc:QCItemInputDefinitionType">
+				<xs:sequence>
+					<xs:element name="DefaultValue" type="xs:string" minOccurs="0" nillable="true"/>
+					<xs:element name="ValueRange" type="xs:string" minOccurs="0" nillable="true"/>
+					<xs:element name="Type" type="xs:string" minOccurs="0" nillable="true"/>
+					<xs:element name="Unit" type="xs:string" minOccurs="0" nillable="true"/>
+					<xs:element name="Representation" type="xs:string" minOccurs="0" nillable="true"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="QCItemInputGroupDefinitionType">
+		<xs:complexContent>
+			<xs:extension base="qc:QCItemInputDefinitionType">
+				<xs:sequence>
+					<xs:element name="Input" type="qc:QCItemInputValueDefinitionType"
+						maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="QCItemOutputType" abstract="true">
+		<xs:sequence>
+			<xs:element name="Name" type="qc:EBUQCIDType"/>
+			<xs:element name="Locator" type="qc:LocatorType" minOccurs="0"/>
+			<xs:element name="Track" type="xs:string" minOccurs="0"/>
+			<xs:element name="WrapperLocation" type="xs:string" minOccurs="0"/>
+			<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QCItemOutputValueType">
+		<xs:complexContent>
+			<xs:extension base="qc:QCItemOutputType">
+				<xs:sequence>
+					<xs:element name="Value" minOccurs="0" type="xs:string"> </xs:element>
+					<xs:element name="Annotation" type="qc:AnnotationType" minOccurs="0"/>
+					<xs:element name="VerificationMedia" type="xs:anyURI" minOccurs="0"/>
+					<xs:element name="Confidence" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:decimal">
+								<xs:minInclusive value="0"/>
+								<xs:maxInclusive value="1"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="Severity" type="qc:SeverityType" minOccurs="0"/>
+					<xs:element minOccurs="0" name="Aliases">
+						<xs:simpleType>
+							<xs:list itemType="xs:anyURI"/>
+						</xs:simpleType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="QCItemOutputGroupType">
+		<xs:complexContent>
+			<xs:extension base="qc:QCItemOutputType">
+				<xs:sequence>
+					<xs:element name="Output" type="qc:QCItemOutputValueType" maxOccurs="unbounded"
+					/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="QCItemOutputDefinitionType" abstract="true">
+		<xs:sequence>
+			<xs:element name="Name" type="qc:EBUQCIDType"/>
+			<xs:element name="Description" type="xs:string"/>
+			<xs:element name="Remarks" type="xs:string" minOccurs="0"/>
+			<xs:element name="HasLocator" type="xs:boolean" default="false"/>
+			<xs:element name="InReports" type="qc:CardinalityType"/>
+			<xs:element name="InChecks" type="qc:CardinalityType"/>
+			<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QCItemOutputValueDefinitionType">
+		<xs:complexContent>
+			<xs:extension base="qc:QCItemOutputDefinitionType">
+				<xs:sequence>
+					<xs:element name="Aliases" minOccurs="0">
+						<xs:simpleType>
+							<xs:list itemType="xs:anyURI"/>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="ValueRange" type="xs:string" minOccurs="0" nillable="true"/>
+					<xs:element name="Type" type="xs:string" minOccurs="0" nillable="true"/>
+					<xs:element name="Unit" type="xs:string" minOccurs="0" nillable="true"/>
+					<xs:element name="Representation" type="xs:string" minOccurs="0" nillable="true"
+					/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="QCItemOutputGroupDefinitionType">
+		<xs:complexContent>
+			<xs:extension base="qc:QCItemOutputDefinitionType">
+				<xs:sequence>
+					<xs:element name="Output" type="qc:QCItemOutputValueDefinitionType"
+						maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>Structure Definitions</xs:documentation>
+	</xs:annotation>
+	<xs:complexType name="LocatorType">
+		<xs:sequence>
+			<xs:element name="Start" type="xs:string" minOccurs="0"/>
+			<xs:element name="End" type="xs:string" minOccurs="0"/>
+			<xs:element name="SpatialRegion" type="qc:xywhType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ToolInformationType">
+		<xs:sequence>
+			<xs:element name="ToolID" type="xs:anyURI"/>
+			<xs:element name="ToolName" type="xs:string"/>
+			<xs:element name="Vendor" type="xs:string" minOccurs="0"/>
+			<xs:element name="URL" type="xs:string" minOccurs="0"/>
+			<xs:element name="Version" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="OperatorType">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="ID" type="xs:anyURI" minOccurs="0"/>
+			<xs:element name="Role" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AnnotationType">
+		<xs:sequence>
+			<xs:element name="Text" type="xs:string"/>
+			<xs:element name="Editor" type="qc:OperatorType" minOccurs="0"/>
+			<xs:element name="Timestamp" type="xs:dateTime" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ContentIdentifierType">
+		<xs:sequence>
+			<xs:element name="ID" type="xs:string"/>
+			<xs:element minOccurs="0" name="Annotation" type="qc:AnnotationType"/>
+			<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ReferenceType">
+		<xs:sequence>
+			<xs:element name="URI" type="xs:anyURI" minOccurs="0"/>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="Remark" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ExampleType">
+		<xs:sequence>
+			<xs:element name="Contents" type="xs:string"/>
+			<xs:element name="Remark" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>Datatype Definitions</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType name="UUIDType">
+		<xs:restriction base="xs:anyURI">
+			<xs:pattern
+				value="urn:uuid:[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"
+			/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DetectionMethodType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="automatic"/>
+			<xs:enumeration value="human"/>
+			<xs:enumeration value="assisted"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ExecutionStatusType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="complete"/>
+			<xs:enumeration value="error"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PublicationStatusType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="active"/>
+			<xs:enumeration value="superseded"/>
+			<xs:enumeration value="withdrawn"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RuleType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="AND"/>
+			<xs:enumeration value="OR"/>
+			<xs:enumeration value="MinimumRelevance"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="xywhType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="((pixel|percent):)?\d+,\d+,\d+,\d+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RelevanceType">
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:maxInclusive value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SeverityType">
+		<xs:restriction base="xs:nonNegativeInteger"/>
+	</xs:simpleType>
+	<xs:simpleType name="EssenceType">
+		<xs:annotation>
+			<xs:documentation>Implemented as a generic string and not an enumeration to accommodate potential changes</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:pattern value="[a-z][ 0-9a-z\-]+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="LayerType">
+		<xs:annotation>
+			<xs:documentation>Implemented as a generic string and not an enumeration to accommodate potential changes</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:pattern value="[a-z][ 0-9a-z\-]+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CategoryType">
+		<xs:annotation>
+			<xs:documentation>Implemented as a generic string and not an enumeration to accommodate potential changes</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:pattern value="[a-z][ 0-9a-z\-]+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EBUQCVersionType">
+		<xs:restriction base="xs:decimal"/>
+	</xs:simpleType>
+	<xs:simpleType name="EBUQCIDType">
+		<xs:restriction base="xs:token">
+			<xs:pattern value="[0-9a-zA-Z\-]+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="UsableAsType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="report"/>
+			<xs:enumeration value="check"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CardinalityType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="required"/>
+			<xs:enumeration value="optional"/>
+			<xs:enumeration value="not applicable"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AnalysisMethodType">
+		<xs:annotation>
+			<xs:documentation>Implemented as a generic string and not an enumeration to accommodate potential changes</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token"/>
+	</xs:simpleType>
+</xs:schema>
