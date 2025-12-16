@@ -1,171 +1,171 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Report xmlns="tag:qc.ebu.ch,2026-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ebuqci="tag:ebu.ch,2025-02:qci">
-  <ReportId>urn:uuid:ad8a0041-d9fc-4872-9d25-284a0f25234c</ReportId>
-  <ReportCreator>
-    <Name>John Doe</Name>
-    <ID>AGENT007</ID>
-    <Role>Smooth Operator</Role>
-  </ReportCreator>
-  <ExecutionStatus>complete</ExecutionStatus>
-  <CheckResult>false</CheckResult>
-  <ContentId>
-    <ContentIdentifier>
-      <ID>urn:uuid:57f5a1e3-54df-4a0b-be44-7ac3167d9eda</ID>
-    </ContentIdentifier>
-  </ContentId>
-  <LastModifiedDateTime>2025-12-16T14:17:14+00:00</LastModifiedDateTime>
-  <OverallAnalysisDuration>P1M</OverallAnalysisDuration>
-  <ToolInformation>
-    <ToolID>QCToolId</ToolID>
-    <ToolName>Advanced QC Tool</ToolName>
-    <Vendor>The Company</Vendor>
-    <URL>https://www.qctool.org</URL>
-    <Version>v2025.12.16.0</Version>
-  </ToolInformation>
-  <Profile>
-    <ID>urn:uuid:a75c8420-77a9-4c75-97e5-3ab479833171</ID>
-    <Name>N/A</Name>
-    <ContentId>
-      <ContentIdentifier>
-        <ID>urn:uuid:57f5a1e3-54df-4a0b-be44-7ac3167d9eda</ID>
-      </ContentIdentifier>
-    </ContentId>
-    <CheckResultRule>AND</CheckResultRule>
-    <Description>N/A</Description>
-<Scopes/>
-    <Requestor>
-      <Name>John Doe</Name>
-      <ID>AGENT007</ID>
-      <Role>Smooth Operator</Role>
-    </Requestor>
-    <DueDate>2025-12-16T14:17:14+00:00</DueDate>
-    <RelevanceLevel>0</RelevanceLevel>
-    <Items>
-      <Item>
-        <EBUQCID>0039B</EBUQCID>
-        <EBUQCName>Digital Tape Dropouts</EBUQCName>
-        <EBUQCVersion>3.0</EBUQCVersion>
-        <InstanceId>urn:uuid:583916dc-2d24-4e3a-aaca-ce9ad7c5c112</InstanceId>
-        <UsedAs>check</UsedAs>
-<Scopes/>
-<Inputs/>
-      </Item>
-      <Item>
-        <EBUQCID>0272B</EBUQCID>
-        <EBUQCName>Black Frames Report</EBUQCName>
-        <EBUQCVersion>1.0</EBUQCVersion>
-        <InstanceId>urn:uuid:414b2c2e-9871-4960-9a39-7e4d08d4c76f</InstanceId>
-        <UsedAs>report</UsedAs>
-<Scopes/>
-<Inputs/>
-      </Item>
-    </Items>
-<ItemDefinitions/>
-  </Profile>
-  <ItemResults>
-    <ItemResult>
-      <EBUQCID>0039B</EBUQCID>
-      <EBUQCName>Digital Tape Dropouts</EBUQCName>
-      <EBUQCVersion>3.0</EBUQCVersion>
-      <InstanceId>urn:uuid:d9bd92ba-775a-404a-8537-6ada482d89ce</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>false</CheckResult>
-      <ToolInformation>
-        <ToolID>QCToolId</ToolID>
-        <ToolName>Advanced QC Tool</ToolName>
-        <Vendor>The Company</Vendor>
-        <URL>https://www.qctool.org</URL>
-        <Version>v2025.12.16.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-12-16T14:17:14+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>AGENT007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-      <Outputs>
-        <Output>
-          <Name>DropoutAreaSegment</Name>
-          <Locator>
-            <Start>86602</Start>
-            <End>86718</End>
-          </Locator>
-          <Annotation>
-			<Text>No Comment</Text>
-            <Editor>
-              <Name>John Doe</Name>
-              <ID>AGENT007</ID>
-              <Role>Smooth Operator</Role>
-            </Editor>
-            <Timestamp>2025-12-16T14:17:14+00:00</Timestamp>
-          </Annotation>
-        </Output>
-      </Outputs>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0272B</EBUQCID>
-      <EBUQCName>Black Frames Report</EBUQCName>
-      <EBUQCVersion>1.0</EBUQCVersion>
-      <InstanceId>urn:uuid:ab0ae3b1-54e5-49c8-9e4d-f9fa90159ec0</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>false</CheckResult>
-      <ToolInformation>
-        <ToolID>QCToolId</ToolID>
-        <ToolName>Advanced QC Tool</ToolName>
-        <Vendor>The Company</Vendor>
-        <URL>https://www.qctool.org</URL>
-        <Version>v2025.12.16.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-12-16T14:17:14+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>AGENT007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-      <Outputs>
-        <Output>
-          <Name>BlackFramesSegment</Name>
-          <Locator>
-            <Start>86874</Start>
-            <End>87005</End>
-          </Locator>
-          <Annotation>
-			<Text>No Comment</Text>
-            <Editor>
-              <Name>John Doe</Name>
-              <ID>AGENT007</ID>
-              <Role>Smooth Operator</Role>
-            </Editor>
-            <Timestamp>2025-12-16T14:17:14+00:00</Timestamp>
-          </Annotation>
-        </Output>
-        <Output>
-          <Name>BlackFramesSegment</Name>
-          <Locator>
-            <Start>87118</Start>
-            <End>87262</End>
-          </Locator>
-          <Annotation>
-			<Text>No Comment</Text>
-            <Editor>
-              <Name>John Doe</Name>
-              <ID>AGENT007</ID>
-              <Role>Smooth Operator</Role>
-            </Editor>
-            <Timestamp>2025-12-16T14:17:14+00:00</Timestamp>
-          </Annotation>
-        </Output>
-      </Outputs>
-    </ItemResult>
-  </ItemResults>
+	<ReportId>urn:uuid:ad8a0041-d9fc-4872-9d25-284a0f25234c</ReportId>
+	<ReportCreator>
+		<Name>John Doe</Name>
+		<ID>AGENT007</ID>
+		<Role>Smooth Operator</Role>
+	</ReportCreator>
+	<ExecutionStatus>complete</ExecutionStatus>
+	<CheckResult>false</CheckResult>
+	<ContentId>
+		<ContentIdentifier>
+			<ID>urn:uuid:57f5a1e3-54df-4a0b-be44-7ac3167d9eda</ID>
+		</ContentIdentifier>
+	</ContentId>
+	<LastModifiedDateTime>2025-12-16T14:17:14+00:00</LastModifiedDateTime>
+	<OverallAnalysisDuration>P1M</OverallAnalysisDuration>
+	<ToolInformation>
+		<ToolID>QCToolId</ToolID>
+		<ToolName>Advanced QC Tool</ToolName>
+		<Vendor>The Company</Vendor>
+		<URL>https://www.qctool.org</URL>
+		<Version>v2025.12.16.0</Version>
+	</ToolInformation>
+	<Profile>
+		<ID>urn:uuid:a75c8420-77a9-4c75-97e5-3ab479833171</ID>
+		<Name>N/A</Name>
+		<ContentId>
+			<ContentIdentifier>
+				<ID>urn:uuid:57f5a1e3-54df-4a0b-be44-7ac3167d9eda</ID>
+			</ContentIdentifier>
+		</ContentId>
+		<CheckResultRule>AND</CheckResultRule>
+		<Description>N/A</Description>
+		<Scopes/>
+		<Requestor>
+			<Name>John Doe</Name>
+			<ID>AGENT007</ID>
+			<Role>Smooth Operator</Role>
+		</Requestor>
+		<DueDate>2025-12-16T14:17:14+00:00</DueDate>
+		<RelevanceLevel>0</RelevanceLevel>
+		<Items>
+			<Item>
+				<EBUQCID>0039B</EBUQCID>
+				<EBUQCName>Digital Tape Dropouts</EBUQCName>
+				<EBUQCVersion>3.0</EBUQCVersion>
+				<InstanceId>urn:uuid:583916dc-2d24-4e3a-aaca-ce9ad7c5c112</InstanceId>
+				<UsedAs>check</UsedAs>
+				<Scopes/>
+				<Inputs/>
+			</Item>
+			<Item>
+				<EBUQCID>0272B</EBUQCID>
+				<EBUQCName>Black Frames Report</EBUQCName>
+				<EBUQCVersion>1.0</EBUQCVersion>
+				<InstanceId>urn:uuid:414b2c2e-9871-4960-9a39-7e4d08d4c76f</InstanceId>
+				<UsedAs>report</UsedAs>
+				<Scopes/>
+				<Inputs/>
+			</Item>
+		</Items>
+		<ItemDefinitions/>
+	</Profile>
+	<ItemResults>
+		<ItemResult>
+			<EBUQCID>0039B</EBUQCID>
+			<EBUQCName>Digital Tape Dropouts</EBUQCName>
+			<EBUQCVersion>3.0</EBUQCVersion>
+			<InstanceId>urn:uuid:d9bd92ba-775a-404a-8537-6ada482d89ce</InstanceId>
+			<AnalysisMethodUsed>measure</AnalysisMethodUsed>
+			<ExecutionStatus>complete</ExecutionStatus>
+			<CheckResult>false</CheckResult>
+			<ToolInformation>
+				<ToolID>QCToolId</ToolID>
+				<ToolName>Advanced QC Tool</ToolName>
+				<Vendor>The Company</Vendor>
+				<URL>https://www.qctool.org</URL>
+				<Version>v2025.12.16.0</Version>
+			</ToolInformation>
+			<Relevance>0</Relevance>
+			<MaxSeverity>0</MaxSeverity>
+			<DetectionMethod>automatic</DetectionMethod>
+			<Revision>0</Revision>
+			<CreationDateTime>2025-12-16T14:17:14+00:00</CreationDateTime>
+			<Operator>
+				<Name>John Doe</Name>
+				<ID>AGENT007</ID>
+				<Role>Smooth Operator</Role>
+			</Operator>
+			<Outputs>
+				<Output>
+					<Name>DropoutAreaSegment</Name>
+					<Locator>
+						<Start>86602</Start>
+						<End>86718</End>
+					</Locator>
+					<Annotation>
+						<Text>No Comment</Text>
+						<Editor>
+							<Name>John Doe</Name>
+							<ID>AGENT007</ID>
+							<Role>Smooth Operator</Role>
+						</Editor>
+						<Timestamp>2025-12-16T14:17:14+00:00</Timestamp>
+					</Annotation>
+				</Output>
+			</Outputs>
+		</ItemResult>
+		<ItemResult>
+			<EBUQCID>0272B</EBUQCID>
+			<EBUQCName>Black Frames Report</EBUQCName>
+			<EBUQCVersion>1.0</EBUQCVersion>
+			<InstanceId>urn:uuid:ab0ae3b1-54e5-49c8-9e4d-f9fa90159ec0</InstanceId>
+			<AnalysisMethodUsed>measure</AnalysisMethodUsed>
+			<ExecutionStatus>complete</ExecutionStatus>
+			<CheckResult>false</CheckResult>
+			<ToolInformation>
+				<ToolID>QCToolId</ToolID>
+				<ToolName>Advanced QC Tool</ToolName>
+				<Vendor>The Company</Vendor>
+				<URL>https://www.qctool.org</URL>
+				<Version>v2025.12.16.0</Version>
+			</ToolInformation>
+			<Relevance>0</Relevance>
+			<MaxSeverity>0</MaxSeverity>
+			<DetectionMethod>automatic</DetectionMethod>
+			<Revision>0</Revision>
+			<CreationDateTime>2025-12-16T14:17:14+00:00</CreationDateTime>
+			<Operator>
+				<Name>John Doe</Name>
+				<ID>AGENT007</ID>
+				<Role>Smooth Operator</Role>
+			</Operator>
+			<Outputs>
+				<Output>
+					<Name>BlackFramesSegment</Name>
+					<Locator>
+						<Start>86874</Start>
+						<End>87005</End>
+					</Locator>
+					<Annotation>
+						<Text>No Comment</Text>
+						<Editor>
+							<Name>John Doe</Name>
+							<ID>AGENT007</ID>
+							<Role>Smooth Operator</Role>
+						</Editor>
+						<Timestamp>2025-12-16T14:17:14+00:00</Timestamp>
+					</Annotation>
+				</Output>
+				<Output>
+					<Name>BlackFramesSegment</Name>
+					<Locator>
+						<Start>87118</Start>
+						<End>87262</End>
+					</Locator>
+					<Annotation>
+						<Text>No Comment</Text>
+						<Editor>
+							<Name>John Doe</Name>
+							<ID>AGENT007</ID>
+							<Role>Smooth Operator</Role>
+						</Editor>
+						<Timestamp>2025-12-16T14:17:14+00:00</Timestamp>
+					</Annotation>
+				</Output>
+			</Outputs>
+		</ItemResult>
+	</ItemResults>
 </Report>
