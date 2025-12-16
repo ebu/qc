@@ -5,7 +5,7 @@
 		   targetNamespace="tag:catalogue.qc.ebu.ch,2026-01"
 		   elementFormDefault="qualified">
 	<!-- API structures -->
-	<xs:import namespace="tag:qc.ebu.ch,2026-01" schemaLocation="../qc-data-model/qc.xsd"/>
+	<xs:import namespace="tag:qc.ebu.ch,2026-01" schemaLocation="https://raw.githubusercontent.com/ebu/qc/refs/heads/main/qc-data-model/qc.xsd"/>
 	<xs:element name="Items">
 		<xs:complexType>
 			<xs:sequence>
