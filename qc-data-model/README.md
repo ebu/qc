@@ -7,7 +7,7 @@ The XML Schema and Class model for EBU QC Reports, QC Profiles and QC Item Defin
 ## Main files
 
 * **XML Schema** for EBU QC Reports, Profiles and Item Definitions: [qc.xsd](qc.xsd)
-* **Documentation** of the Class model and how this relates to the Schema: [pdf](qc-data-model.pdf) (*auto-generated*) | [docx](qc-data-model.docx) (*original*)
+* **Documentation** of the Class model and how this relates to the Schema: [pdf](qc-data-model.pdf) (*auto-generated*), [docx](qc-data-model.docx) (*original*)
 
 ## Approach to versioning of qc.xsd
 
