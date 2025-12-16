@@ -29,7 +29,7 @@ jobs:
         # Docker Hub image
         image: moalhaddar/docx-to-pdf:2.1.0-12
         ports:
-          - 8080:8080
+          - 8080
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -40,9 +40,9 @@ jobs:
           cd ./qc-reports/qc-report-inspector/
           npm install
       - name: Convert qc-catalogue-api.docx
-        run: curl --output ./qc-catalogue-api/qc-catalogue-api.pdf --location 'http://localhost:${{ job.services.libreoffice.ports[8080] }}/pdf' --form 'document=@"./qc-catalogue-api/qc-catalogue-api.docx"'
+        run: curl --retry 10 --retry-all-errors --output ./qc-catalogue-api/qc-catalogue-api.pdf --location 'http://localhost:${{ job.services.libreoffice.ports[8080] }}/pdf' --form 'document=@"./qc-catalogue-api/qc-catalogue-api.docx"'
       - name: Convert qc-data-model.docx
-        run: curl --output ./qc-data-model/qc-data-model.pdf --location 'http://localhost:${{ job.services.libreoffice.ports[8080] }}/pdf' --form 'document=@"./qc-data-model/qc-data-model.docx"'
+        run: curl --retry 10 --retry-all-errors --output ./qc-data-model/qc-data-model.pdf --location 'http://localhost:${{ job.services.libreoffice.ports[8080] }}/pdf' --form 'document=@"./qc-data-model/qc-data-model.docx"'
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
