@@ -115,10 +115,10 @@ async function processDoc() {
         report_check_result = xml_doc.querySelector("Report>CheckResult").textContent;
     }
 
-    if (xml_doc.querySelector("Report>ModifiedCheckResult") === null){
+    if (xml_doc.querySelector("Report>ExtensionProperties>ModifiedCheckResult") === null){
         op_div.insertAdjacentHTML("beforeend", `<p>Overall result: <span class="badge ${getResultClass(report_check_result)}">${report_check_result}</span></p><p>${report_tool_info_button.outerHTML}</p>`);
     } else {
-        const report_modified_check_result = xml_doc.querySelector("Report>ModifiedCheckResult>OverrideValue").textContent;
+        const report_modified_check_result = xml_doc.querySelector("Report>ExtensionProperties>ModifiedCheckResult>OverrideValue").textContent;
         op_div.insertAdjacentHTML("beforeend", `<p>Overall result: <span class="badge ${getResultClass(report_modified_check_result)}">${report_modified_check_result}</span> <em>(result was "${report_check_result}" before override)</em></p><p>${report_tool_info_button.outerHTML}</p>`);
     }
    
@@ -147,10 +147,10 @@ async function processDoc() {
             item_result = item.querySelector("ItemResult>CheckResult").textContent;
         }
     
-        if (item.querySelector("ItemResult>ModifiedCheckResult") === null){
+        if (item.querySelector("ItemResult>ExtensionProperties>ModifiedCheckResult") === null){
             qc_div.insertAdjacentHTML("beforeend", `<p>Item result: <span class="badge ${getResultClass(item_result)}">${item_result}</span></p><p>${item_tool_info_button.outerHTML}</p>`);
         } else {
-            const item_modified_check_result = item.querySelector("ItemResult>ModifiedCheckResult>OverrideValue").textContent;
+            const item_modified_check_result = item.querySelector("ItemResult>ExtensionProperties>ModifiedCheckResult>OverrideValue").textContent;
             qc_div.insertAdjacentHTML("beforeend", `<p>Item result: <span class="badge ${getResultClass(item_modified_check_result)}">${item_modified_check_result}</span> <em>(result was "${item_result}" before override)</em></p><p>${item_tool_info_button.outerHTML}</p>`);
         }
         
@@ -161,17 +161,17 @@ async function processDoc() {
             for (const output of item.querySelectorAll("ItemResult>Outputs>Output")) {
 
                 let suffix_text = "";
-                if(output.querySelector("Output>CheckResult") !== null) {
-                    const output_result = output.querySelector("Output>CheckResult").textContent;
+                if(output.querySelector("Output>ExtensionProperties>CheckResult") !== null) {
+                    const output_result = output.querySelector("Output>ExtensionProperties>CheckResult").textContent;
                     
-                    if (output.querySelector("Output>ModifiedCheckResult") === null){
+                    if (output.querySelector("Output>ExtensionProperties>ModifiedCheckResult") === null){
                         suffix_text += getResultFormatted(output_result);
                     } else {
-                        const output_modified_check_result = output.querySelector("Output>ModifiedCheckResult>OverrideValue").textContent;
+                        const output_modified_check_result = output.querySelector("Output>ExtensionProperties>ModifiedCheckResult>OverrideValue").textContent;
                         suffix_text += getResultFormatted(output_modified_check_result) + ` (result was "${item_result}" before override)`;
                     }
         
-                    if (output.querySelector("Output>ExtendedAnnotations>ExtendedAnnotation") !== null){
+                    if (output.querySelector("Output>ExtensionProperties>ExtendedAnnotations>ExtendedAnnotation") !== null){
                         suffix_text += ' 💬'
                     }
 
