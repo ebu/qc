@@ -1,6 +1,8 @@
-# Overview
+# EBU QC: QC Reports: Best practice guidance
 
-This document defines a set of provisions to aid interoperability of EBU QC XML Reports.
+## About
+
+This document defines a set of provisions to aid interoperability of EBU QC Reports as XML files.
 
 *ℹ️ In this document names of entities from the XML Schema are used. These differ slightly from the Class names used in the documentation of the Model e.g. a QCItemDefinition instance in an EBU QC Report XML file is represented by a `ItemDefinition` element*
 
@@ -48,7 +50,7 @@ A non-exhaustive checklist to ensure that Reports are conformant:
 * XSD compliance
 * Compliance with the documentation of the Model
 * (optional) Compliance with this Best Practice Guidance
-* The children of `/Report/Profile/Items` and `/Report/ItemResults` comply with the corresponding QCItemDefinition instances in the EBU-hosted Catalogue
+* The children of `/Report/Profile/Items` and `/Report/ItemResults` comply with the corresponding QCItemDefinition instances in the EBU-hosted catalogue
 * `/Report/ExecutionStatus` has the correct value when considering `/Report/ItemResults/ItemResult/ExecutionStatus` for all `ItemResult`s
 * `/Report/CheckResult` has the correct value when considering `/Report/ItemResults/ItemResult/CheckResult` for all `ItemResult`s
 

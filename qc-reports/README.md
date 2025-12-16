@@ -1,4 +1,8 @@
-# EBU QC: QC Reports
+# EBU QC: QC Reports: implementation resources
+
+## About
+
+Resources to help developers implement support for interoperable EBU QC Reports (one of the entities defined by the [QC data model](../qc-data-model/))
 
 ## Main files
 
@@ -6,7 +10,8 @@
 * **QC Report sample**: [qc-report-generic-sample.xml](qc-report-generic-sample.xml)
 * **QC Report inspector (experimental)**: [qc-report-inspector/](qc-report-inspector/)
 
-# EBU QC Report explainer
+## EBU QC Report explainer
+
+The diagram below shows an example of constructing an EBU QC Report to capture the details of testing an MXF media file. A QC Report is an instance of the QCReport class in the [QC data model](../qc-data-model/). The QCItemDefinition (another class in the [QC data model](../qc-data-model/)) instances could be obtained from a catalogue and queried via the [QC catalogue API](../qc-catalogue-api/).
 
 ![EBU QC Report Explainer](explainer.drawio.svg)
-
