@@ -1,999 +1,171 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<Report xmlns="tag:qc.ebu.ch:2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ebuqci="tag:ebu.ch,2025-02:qci">
-  <ReportId>urn:uuid:a151b4bf-4c84-4b8e-8dcb-8077231dae0e</ReportId>
-  <ReportCreator>
-    <Name>John Doe</Name>
-    <ID>JD-007</ID>
-    <Role>Smooth Operator</Role>
-  </ReportCreator>
-  <ExecutionStatus>complete</ExecutionStatus>
-  <CheckResult>false</CheckResult>
-  <ContentId>
-    <ContentIdentifier>
-      <ID>H:\PLUGFEST\ARDZDF_XDF01-IN2IT-XAVCL-1080p50-16ch.mxf</ID>
-    </ContentIdentifier>
-  </ContentId>
-  <LastModifiedDateTime>2025-11-11T15:29:21+00:00</LastModifiedDateTime>
-  <OverallAnalysisDuration>P1M</OverallAnalysisDuration>
-  <ToolInformation>
-    <ToolID>AQCTool1</ToolID>
-    <ToolName>Advanced QC Tool One</ToolName>
-    <Vendor>Blofeld Industries</Vendor>
-    <URL>https://www.blofeld-industries.com</URL>
-    <Version>v2025.11.10.0</Version>
-  </ToolInformation>
-  <ItemResults>
-    <ItemResult>
-      <EBUQCID>0200W</EBUQCID>
-      <EBUQCName>RIP Presence</EBUQCName>
-      <EBUQCVersion>2.0</EBUQCVersion>
-      <InstanceId>urn:uuid:e0cd1871-7491-513d-9d5f-4e2eef5fa0ad</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:21+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0201W</EBUQCID>
-      <EBUQCName>Index Edit Rate</EBUQCName>
-      <EBUQCVersion>1.0</EBUQCVersion>
-      <InstanceId>urn:uuid:fabb09a7-4b7d-5a4b-8d38-654c8694d4ce</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:21+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0202W</EBUQCID>
-      <EBUQCName>Index Start Position</EBUQCName>
-      <EBUQCVersion>1.0</EBUQCVersion>
-      <InstanceId>urn:uuid:51a95e14-8862-513a-b8c2-97631605ce42</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:21+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0211W</EBUQCID>
-      <EBUQCName>Edit Rate</EBUQCName>
-      <EBUQCVersion>1.0</EBUQCVersion>
-      <InstanceId>urn:uuid:e675e6d8-4495-5ba9-9bee-8c4fe3535970</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:21+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0054W</EBUQCID>
-      <EBUQCName>Origin Values</EBUQCName>
-      <EBUQCVersion>3.0</EBUQCVersion>
-      <InstanceId>urn:uuid:ecead6e4-7c9e-559c-ab02-c30bbf8aae7f</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:21+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0069W</EBUQCID>
-      <EBUQCName>Display Aspect Ratio</EBUQCName>
-      <EBUQCVersion>4.0</EBUQCVersion>
-      <InstanceId>urn:uuid:1e63ec9c-a01d-5007-943a-d0839e5089af</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:21+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0041W</EBUQCID>
-      <EBUQCName>Video Field Order</EBUQCName>
-      <EBUQCVersion>3.0</EBUQCVersion>
-      <InstanceId>urn:uuid:cd022c3f-3de5-5b1a-b0c7-b5c923790038</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:21+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0162W</EBUQCID>
-      <EBUQCName>Signal Standard</EBUQCName>
-      <EBUQCVersion>2.0</EBUQCVersion>
-      <InstanceId>urn:uuid:d6cad616-1149-5693-af20-10ab678e299e</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>false</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:21+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0214W</EBUQCID>
-      <EBUQCName>Frame Layout</EBUQCName>
-      <EBUQCVersion>2.0</EBUQCVersion>
-      <InstanceId>urn:uuid:bd1e3359-a22f-5a89-9cce-af2caa88bb4c</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:21+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0043W</EBUQCID>
-      <EBUQCName>Display Frame Size</EBUQCName>
-      <EBUQCVersion>3.0</EBUQCVersion>
-      <InstanceId>urn:uuid:b1c713b0-5c77-5b7f-b123-615b45387dc4</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:21+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0070W</EBUQCID>
-      <EBUQCName>Stored Frame Size</EBUQCName>
-      <EBUQCVersion>3.0</EBUQCVersion>
-      <InstanceId>urn:uuid:35efcf50-3642-5715-a4bc-298f070c11b3</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:21+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0163W</EBUQCID>
-      <EBUQCName>Sampled Frame Size</EBUQCName>
-      <EBUQCVersion>2.0</EBUQCVersion>
-      <InstanceId>urn:uuid:e096d3cd-564e-5913-9ea0-c0d6c33b5f23</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:22+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0161W</EBUQCID>
-      <EBUQCName>Essence Offset Positions</EBUQCName>
-      <EBUQCVersion>2.0</EBUQCVersion>
-      <InstanceId>urn:uuid:0152b478-6d06-5c18-8517-b6b4bd5bd500</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:22+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0001W</EBUQCID>
-      <EBUQCName>Active Format Description</EBUQCName>
-      <EBUQCVersion>5.0</EBUQCVersion>
-      <InstanceId>urn:uuid:d1ab8f94-8aa5-56e5-91b5-4a4234733bbe</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>false</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:22+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0159W</EBUQCID>
-      <EBUQCName>Video Line Map</EBUQCName>
-      <EBUQCVersion>2.0</EBUQCVersion>
-      <InstanceId>urn:uuid:fb5c434f-a341-5e49-baa8-85f4df10098d</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:22+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0042W</EBUQCID>
-      <EBUQCName>Video Frame Rate</EBUQCName>
-      <EBUQCVersion>4.0</EBUQCVersion>
-      <InstanceId>urn:uuid:ad3eb8b1-6fb2-5145-93f0-4e3515ccbe91</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:22+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0105W</EBUQCID>
-      <EBUQCName>Video Codec</EBUQCName>
-      <EBUQCVersion>2.0</EBUQCVersion>
-      <InstanceId>urn:uuid:a12856e5-93ae-50de-838e-180c636f66c8</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>false</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:22+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0035W</EBUQCID>
-      <EBUQCName>Video Codec Profile &amp; Level</EBUQCName>
-      <EBUQCVersion>3.0</EBUQCVersion>
-      <InstanceId>urn:uuid:f851e3be-e3c2-5c28-ba03-42fed8076211</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>false</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:22+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0032W</EBUQCID>
-      <EBUQCName>Video Bit Depth</EBUQCName>
-      <EBUQCVersion>3.0</EBUQCVersion>
-      <InstanceId>urn:uuid:c481e9b5-4d96-558d-8c76-4596e62ce2f9</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:22+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0083W</EBUQCID>
-      <EBUQCName>Colourimetry Characteristics</EBUQCName>
-      <EBUQCVersion>1.0</EBUQCVersion>
-      <InstanceId>urn:uuid:b91f7d52-afcb-53d3-bad4-5994be67f015</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:22+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0216W</EBUQCID>
-      <EBUQCName>Image Start Offset</EBUQCName>
-      <EBUQCVersion>2.0</EBUQCVersion>
-      <InstanceId>urn:uuid:ae40d39e-3abe-57e2-bf55-b4d219a144ba</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:22+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0237W</EBUQCID>
-      <EBUQCName>Image End Offset</EBUQCName>
-      <EBUQCVersion>2.0</EBUQCVersion>
-      <InstanceId>urn:uuid:cd6d7c2e-f7c9-5293-98ae-fe6872fa0d4b</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:22+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0217W</EBUQCID>
-      <EBUQCName>Colour Siting</EBUQCName>
-      <EBUQCVersion>2.0</EBUQCVersion>
-      <InstanceId>urn:uuid:1c2dd319-0f0b-5711-999d-8b8ad62c760a</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>false</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:22+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0218W</EBUQCID>
-      <EBUQCName>Padding Bits</EBUQCName>
-      <EBUQCVersion>2.0</EBUQCVersion>
-      <InstanceId>urn:uuid:1617715d-e36d-5ef8-9b2b-82d561399550</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:22+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0219W</EBUQCID>
-      <EBUQCName>Black Ref Level</EBUQCName>
-      <EBUQCVersion>2.0</EBUQCVersion>
-      <InstanceId>urn:uuid:4975060b-c61a-5e1f-ad1a-dbc43e4dc7e1</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:22+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0220W</EBUQCID>
-      <EBUQCName>White Ref Level</EBUQCName>
-      <EBUQCVersion>2.0</EBUQCVersion>
-      <InstanceId>urn:uuid:2b601d5b-5386-5fe4-957d-c5d97a8b271f</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:22+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0221W</EBUQCID>
-      <EBUQCName>Colour Range</EBUQCName>
-      <EBUQCVersion>2.0</EBUQCVersion>
-      <InstanceId>urn:uuid:64bd9dc1-81b2-58a9-a05b-2cfc998b24f0</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:22+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0222W</EBUQCID>
-      <EBUQCName>Horizontal Subsampling</EBUQCName>
-      <EBUQCVersion>2.0</EBUQCVersion>
-      <InstanceId>urn:uuid:38dfb54b-8c3a-599f-a778-6c0139a2ef06</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:22+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0223W</EBUQCID>
-      <EBUQCName>Vertical Subsampling</EBUQCName>
-      <EBUQCVersion>2.0</EBUQCVersion>
-      <InstanceId>urn:uuid:a6885aec-6b44-56fb-a49a-f409067388f4</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:22+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0003W</EBUQCID>
-      <EBUQCName>Audio Bit Depth</EBUQCName>
-      <EBUQCVersion>3.0</EBUQCVersion>
-      <InstanceId>urn:uuid:7f5bbc2d-0097-5e1c-9cb9-ee83c875e487</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:22+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0013W</EBUQCID>
-      <EBUQCName>Audio Sample Rate</EBUQCName>
-      <EBUQCVersion>4.0</EBUQCVersion>
-      <InstanceId>urn:uuid:c8e082ee-396f-580d-9a22-9ac4b760c3e2</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:22+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0164W</EBUQCID>
-      <EBUQCName>Audio Channels per Track</EBUQCName>
-      <EBUQCVersion>2.0</EBUQCVersion>
-      <InstanceId>urn:uuid:a8475234-5b2d-59f1-b633-5e52a44aa175</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:22+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0231W</EBUQCID>
-      <EBUQCName>Locked/Unlocked</EBUQCName>
-      <EBUQCVersion>2.0</EBUQCVersion>
-      <InstanceId>urn:uuid:9d410f0b-ffc8-5d7e-88f1-59fc365db61d</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:22+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0234W</EBUQCID>
-      <EBUQCName>Block Alignment</EBUQCName>
-      <EBUQCVersion>2.0</EBUQCVersion>
-      <InstanceId>urn:uuid:38d2004f-bd49-576a-ab8d-120cb6a88b2a</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:22+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0235W</EBUQCID>
-      <EBUQCName>Average Bytes per Second</EBUQCName>
-      <EBUQCVersion>2.0</EBUQCVersion>
-      <InstanceId>urn:uuid:7202e7c3-fd3d-5f1d-a1e9-856f823ab12d</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>true</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:22+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-    <ItemResult>
-      <EBUQCID>0026W</EBUQCID>
-      <EBUQCName>Timecode</EBUQCName>
-      <EBUQCVersion>3.0</EBUQCVersion>
-      <InstanceId>urn:uuid:b93c806b-d957-5c32-8a60-2b326f27b49c</InstanceId>
-      <AnalysisMethodUsed>measure</AnalysisMethodUsed>
-      <ExecutionStatus>complete</ExecutionStatus>
-      <CheckResult>false</CheckResult>
-      <ToolInformation>
-        <ToolID>AQCTool1</ToolID>
-        <ToolName>Advanced QC Tool One</ToolName>
-        <Vendor>Blofeld Industries</Vendor>
-        <URL>https://www.blofeld-industries.com</URL>
-        <Version>v2025.11.10.0</Version>
-      </ToolInformation>
-      <Relevance>0</Relevance>
-      <MaxSeverity>0</MaxSeverity>
-      <DetectionMethod>automatic</DetectionMethod>
-      <Revision>0</Revision>
-      <CreationDateTime>2025-11-11T15:29:22+00:00</CreationDateTime>
-      <Operator>
-        <Name>John Doe</Name>
-        <ID>JD-007</ID>
-        <Role>Smooth Operator</Role>
-      </Operator>
-<Outputs/>
-    </ItemResult>
-  </ItemResults>
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="tag:qc.ebu.ch,2026-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ebuqci="tag:ebu.ch,2025-02:qci">
+	<ReportId>urn:uuid:ad8a0041-d9fc-4872-9d25-284a0f25234c</ReportId>
+	<ReportCreator>
+		<Name>John Doe</Name>
+		<ID>AGENT007</ID>
+		<Role>Smooth Operator</Role>
+	</ReportCreator>
+	<ExecutionStatus>complete</ExecutionStatus>
+	<CheckResult>false</CheckResult>
+	<ContentId>
+		<ContentIdentifier>
+			<ID>urn:uuid:57f5a1e3-54df-4a0b-be44-7ac3167d9eda</ID>
+		</ContentIdentifier>
+	</ContentId>
+	<LastModifiedDateTime>2025-12-16T14:17:14+00:00</LastModifiedDateTime>
+	<OverallAnalysisDuration>P1M</OverallAnalysisDuration>
+	<ToolInformation>
+		<ToolID>QCToolId</ToolID>
+		<ToolName>Advanced QC Tool</ToolName>
+		<Vendor>The Company</Vendor>
+		<URL>https://www.qctool.org</URL>
+		<Version>v2025.12.16.0</Version>
+	</ToolInformation>
+	<Profile>
+		<ID>urn:uuid:a75c8420-77a9-4c75-97e5-3ab479833171</ID>
+		<Name>N/A</Name>
+		<ContentId>
+			<ContentIdentifier>
+				<ID>urn:uuid:57f5a1e3-54df-4a0b-be44-7ac3167d9eda</ID>
+			</ContentIdentifier>
+		</ContentId>
+		<CheckResultRule>AND</CheckResultRule>
+		<Description>N/A</Description>
+		<Scopes/>
+		<Requestor>
+			<Name>John Doe</Name>
+			<ID>AGENT007</ID>
+			<Role>Smooth Operator</Role>
+		</Requestor>
+		<DueDate>2025-12-16T14:17:14+00:00</DueDate>
+		<RelevanceLevel>0</RelevanceLevel>
+		<Items>
+			<Item>
+				<EBUQCID>0039B</EBUQCID>
+				<EBUQCName>Digital Tape Dropouts</EBUQCName>
+				<EBUQCVersion>3.0</EBUQCVersion>
+				<InstanceId>urn:uuid:583916dc-2d24-4e3a-aaca-ce9ad7c5c112</InstanceId>
+				<UsedAs>check</UsedAs>
+				<Scopes/>
+				<Inputs/>
+			</Item>
+			<Item>
+				<EBUQCID>0272B</EBUQCID>
+				<EBUQCName>Black Frames Report</EBUQCName>
+				<EBUQCVersion>1.0</EBUQCVersion>
+				<InstanceId>urn:uuid:414b2c2e-9871-4960-9a39-7e4d08d4c76f</InstanceId>
+				<UsedAs>report</UsedAs>
+				<Scopes/>
+				<Inputs/>
+			</Item>
+		</Items>
+		<ItemDefinitions/>
+	</Profile>
+	<ItemResults>
+		<ItemResult>
+			<EBUQCID>0039B</EBUQCID>
+			<EBUQCName>Digital Tape Dropouts</EBUQCName>
+			<EBUQCVersion>3.0</EBUQCVersion>
+			<InstanceId>urn:uuid:d9bd92ba-775a-404a-8537-6ada482d89ce</InstanceId>
+			<AnalysisMethodUsed>measure</AnalysisMethodUsed>
+			<ExecutionStatus>complete</ExecutionStatus>
+			<CheckResult>false</CheckResult>
+			<ToolInformation>
+				<ToolID>QCToolId</ToolID>
+				<ToolName>Advanced QC Tool</ToolName>
+				<Vendor>The Company</Vendor>
+				<URL>https://www.qctool.org</URL>
+				<Version>v2025.12.16.0</Version>
+			</ToolInformation>
+			<Relevance>0</Relevance>
+			<MaxSeverity>0</MaxSeverity>
+			<DetectionMethod>automatic</DetectionMethod>
+			<Revision>0</Revision>
+			<CreationDateTime>2025-12-16T14:17:14+00:00</CreationDateTime>
+			<Operator>
+				<Name>John Doe</Name>
+				<ID>AGENT007</ID>
+				<Role>Smooth Operator</Role>
+			</Operator>
+			<Outputs>
+				<Output>
+					<Name>DropoutAreaSegment</Name>
+					<Locator>
+						<Start>86602</Start>
+						<End>86718</End>
+					</Locator>
+					<Annotation>
+						<Text>No Comment</Text>
+						<Editor>
+							<Name>John Doe</Name>
+							<ID>AGENT007</ID>
+							<Role>Smooth Operator</Role>
+						</Editor>
+						<Timestamp>2025-12-16T14:17:14+00:00</Timestamp>
+					</Annotation>
+				</Output>
+			</Outputs>
+		</ItemResult>
+		<ItemResult>
+			<EBUQCID>0272B</EBUQCID>
+			<EBUQCName>Black Frames Report</EBUQCName>
+			<EBUQCVersion>1.0</EBUQCVersion>
+			<InstanceId>urn:uuid:ab0ae3b1-54e5-49c8-9e4d-f9fa90159ec0</InstanceId>
+			<AnalysisMethodUsed>measure</AnalysisMethodUsed>
+			<ExecutionStatus>complete</ExecutionStatus>
+			<CheckResult>false</CheckResult>
+			<ToolInformation>
+				<ToolID>QCToolId</ToolID>
+				<ToolName>Advanced QC Tool</ToolName>
+				<Vendor>The Company</Vendor>
+				<URL>https://www.qctool.org</URL>
+				<Version>v2025.12.16.0</Version>
+			</ToolInformation>
+			<Relevance>0</Relevance>
+			<MaxSeverity>0</MaxSeverity>
+			<DetectionMethod>automatic</DetectionMethod>
+			<Revision>0</Revision>
+			<CreationDateTime>2025-12-16T14:17:14+00:00</CreationDateTime>
+			<Operator>
+				<Name>John Doe</Name>
+				<ID>AGENT007</ID>
+				<Role>Smooth Operator</Role>
+			</Operator>
+			<Outputs>
+				<Output>
+					<Name>BlackFramesSegment</Name>
+					<Locator>
+						<Start>86874</Start>
+						<End>87005</End>
+					</Locator>
+					<Annotation>
+						<Text>No Comment</Text>
+						<Editor>
+							<Name>John Doe</Name>
+							<ID>AGENT007</ID>
+							<Role>Smooth Operator</Role>
+						</Editor>
+						<Timestamp>2025-12-16T14:17:14+00:00</Timestamp>
+					</Annotation>
+				</Output>
+				<Output>
+					<Name>BlackFramesSegment</Name>
+					<Locator>
+						<Start>87118</Start>
+						<End>87262</End>
+					</Locator>
+					<Annotation>
+						<Text>No Comment</Text>
+						<Editor>
+							<Name>John Doe</Name>
+							<ID>AGENT007</ID>
+							<Role>Smooth Operator</Role>
+						</Editor>
+						<Timestamp>2025-12-16T14:17:14+00:00</Timestamp>
+					</Annotation>
+				</Output>
+			</Outputs>
+		</ItemResult>
+	</ItemResults>
 </Report>
