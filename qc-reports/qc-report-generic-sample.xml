@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Report xmlns="tag:qc.ebu.ch,2026-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ebuqci="tag:ebu.ch,2025-02:qci">
+<Report xmlns="tag:qc.ebu.ch,2026-01">
 	<ReportId>urn:uuid:ad8a0041-d9fc-4872-9d25-284a0f25234c</ReportId>
 	<ReportCreator>
 		<Name>John Doe</Name>
@@ -32,14 +32,18 @@
 		</ContentId>
 		<CheckResultRule>AND</CheckResultRule>
 		<Description>N/A</Description>
-		<Scopes/>
+		<Scopes>
+			<Scope>
+				<Start>86000</Start>
+				<End>255786</End>
+			</Scope>
+		</Scopes>
 		<Requestor>
 			<Name>John Doe</Name>
 			<ID>AGENT007</ID>
 			<Role>Smooth Operator</Role>
 		</Requestor>
 		<DueDate>2025-12-16T14:17:14+00:00</DueDate>
-		<RelevanceLevel>0</RelevanceLevel>
 		<Items>
 			<Item>
 				<EBUQCID>0039B</EBUQCID>
@@ -48,7 +52,16 @@
 				<InstanceId>urn:uuid:583916dc-2d24-4e3a-aaca-ce9ad7c5c112</InstanceId>
 				<UsedAs>check</UsedAs>
 				<Scopes/>
-				<Inputs/>
+				<Inputs>
+					<Input>
+						<Name>MinimumArea</Name>
+						<Value>80.00%</Value>
+					</Input>
+					<Input>
+						<Name>MinimumDuration</Name>
+						<Value>20</Value>
+					</Input>
+				</Inputs>
 			</Item>
 			<Item>
 				<EBUQCID>0272B</EBUQCID>
@@ -67,7 +80,7 @@
 			<EBUQCID>0039B</EBUQCID>
 			<EBUQCName>Digital Tape Dropouts</EBUQCName>
 			<EBUQCVersion>3.0</EBUQCVersion>
-			<InstanceId>urn:uuid:d9bd92ba-775a-404a-8537-6ada482d89ce</InstanceId>
+			<InstanceId>urn:uuid:583916dc-2d24-4e3a-aaca-ce9ad7c5c112</InstanceId>
 			<AnalysisMethodUsed>measure</AnalysisMethodUsed>
 			<ExecutionStatus>complete</ExecutionStatus>
 			<CheckResult>false</CheckResult>
@@ -78,10 +91,7 @@
 				<URL>https://www.qctool.org</URL>
 				<Version>v2025.12.16.0</Version>
 			</ToolInformation>
-			<Relevance>0</Relevance>
-			<MaxSeverity>0</MaxSeverity>
 			<DetectionMethod>automatic</DetectionMethod>
-			<Revision>0</Revision>
 			<CreationDateTime>2025-12-16T14:17:14+00:00</CreationDateTime>
 			<Operator>
 				<Name>John Doe</Name>
@@ -90,11 +100,25 @@
 			</Operator>
 			<Outputs>
 				<Output>
+					<Name>CheckResult</Name>
+					<Value>false</Value>
+					<Annotation>
+						<Text>No Comment</Text>
+						<Editor>
+							<Name>John Doe</Name>
+							<ID>AGENT007</ID>
+							<Role>Smooth Operator</Role>
+						</Editor>
+						<Timestamp>2025-12-16T14:17:14+00:00</Timestamp>
+					</Annotation>
+				</Output>
+				<Output>
 					<Name>DropoutAreaSegment</Name>
 					<Locator>
 						<Start>86602</Start>
 						<End>86718</End>
 					</Locator>
+					<Value>92.00%</Value>
 					<Annotation>
 						<Text>No Comment</Text>
 						<Editor>
@@ -111,10 +135,9 @@
 			<EBUQCID>0272B</EBUQCID>
 			<EBUQCName>Black Frames Report</EBUQCName>
 			<EBUQCVersion>1.0</EBUQCVersion>
-			<InstanceId>urn:uuid:ab0ae3b1-54e5-49c8-9e4d-f9fa90159ec0</InstanceId>
+			<InstanceId>urn:uuid:414b2c2e-9871-4960-9a39-7e4d08d4c76f</InstanceId>
 			<AnalysisMethodUsed>measure</AnalysisMethodUsed>
 			<ExecutionStatus>complete</ExecutionStatus>
-			<CheckResult>false</CheckResult>
 			<ToolInformation>
 				<ToolID>QCToolId</ToolID>
 				<ToolName>Advanced QC Tool</ToolName>
@@ -122,10 +145,7 @@
 				<URL>https://www.qctool.org</URL>
 				<Version>v2025.12.16.0</Version>
 			</ToolInformation>
-			<Relevance>0</Relevance>
-			<MaxSeverity>0</MaxSeverity>
 			<DetectionMethod>automatic</DetectionMethod>
-			<Revision>0</Revision>
 			<CreationDateTime>2025-12-16T14:17:14+00:00</CreationDateTime>
 			<Operator>
 				<Name>John Doe</Name>

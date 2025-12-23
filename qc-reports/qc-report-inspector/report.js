@@ -154,16 +154,18 @@ async function processDoc() {
             qc_div.insertAdjacentHTML("beforeend", `<p>Item result: <span class="badge ${getResultClass(item_modified_check_result)}">${item_modified_check_result}</span> <em>(result was "${item_result}" before override)</em></p><p>${item_tool_info_button.outerHTML}</p>`);
         }
         
-        if (item.querySelectorAll("ItemResult>Outputs>Output").length > 0){
+        const outputs_with_time_locators = item.querySelectorAll("ItemResult>Outputs>Output:has(>Locator>:is(Start, End))");
+        if (outputs_with_time_locators.length > 0){
 
             let dropdown_clone = template_dropdown.content.cloneNode(true);
 
-            for (const output of item.querySelectorAll("ItemResult>Outputs>Output")) {
+            for (const output of outputs_with_time_locators) {
 
                 let suffix_text = "";
                 if(output.querySelector("Output>ExtensionProperties>CheckResult") !== null) {
+                    suffix_text += " | ";
                     const output_result = output.querySelector("Output>ExtensionProperties>CheckResult").textContent;
-                    
+
                     if (output.querySelector("Output>ExtensionProperties>ModifiedCheckResult") === null){
                         suffix_text += getResultFormatted(output_result);
                     } else {
@@ -177,7 +179,7 @@ async function processDoc() {
 
                 }
                                 
-                dropdown_clone.querySelector("ul").insertAdjacentHTML("beforeend", `<li><a class="dropdown-item" href="#">${output.querySelector("Output>Locator>Start").textContent} ${suffix_text}</a></li>`);
+                dropdown_clone.querySelector("ul").insertAdjacentHTML("beforeend", `<li><a class="dropdown-item" href="#">${safeText(output.querySelector("Output>Locator>Start"))}-${safeText(output.querySelector("Output>Locator>End"))}${suffix_text}</a></li>`);
 
             }
 

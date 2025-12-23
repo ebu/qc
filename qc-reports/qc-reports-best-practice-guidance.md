@@ -1,14 +1,19 @@
-# EBU QC: QC Reports: Best practice guidance
+# EBU QC: QC Reports: Best practice guidance for a pass/fail media content QC operation
 
 ## About
 
 This document defines a set of provisions to aid interoperability of EBU QC Reports as XML files.
 
-*ℹ️ In this document names of entities from the XML Schema are used. These differ slightly from the Class names used in the documentation of the Model e.g. a QCItemDefinition instance in an EBU QC Report XML file is represented by a `ItemDefinition` element*
+It assumes that QC of a media file or package is performed to generate a QC Report that has an overall result (either "pass" or "fail").
 
-## Assumptions
+Example scenario: a broadcaster requires that every media file received is accompanied by a QC Report that:
 
-* QC of a media file or package is performed to generate a QC Report to give either a "pass" or "fail" result
+* confirms that the broadcaster-mandated QC tests have all been performed
+* gives an overall result of "pass" or "fail"
+
+In general, EBU QC Reports are not required to comply with the provisions in this document. Indeed, the provisions might not be applicable to QC Reports created in other scenarios.
+
+*ℹ️ In this document names of entities from the XML Schema are used. These differ slightly from the Class names used in the documentation of the Model e.g. a QCItemDefinition instance in an EBU QC Report XML file is represented by an `ItemDefinition` XML element*
 
 ## `/Report`
 
@@ -36,7 +41,7 @@ This document defines a set of provisions to aid interoperability of EBU QC Repo
 
 ## Time values in `LocatorType` instances (`Start` and `End` values)
 
-🚧 DRAFT: assumptions about time strings
+These `Start` and `End` values are purely freeform strings. There is currently nothing inside a QC Report that tells the reader how to interpret these strings. So, current best practice is for each QC Report creator to externally document/communicate how these strings are populated.
 
 ## Timezones
 
@@ -47,10 +52,13 @@ This document defines a set of provisions to aid interoperability of EBU QC Repo
 ## Checklist for verifying compliance of QC Report XML files
 
 A non-exhaustive checklist to ensure that Reports are conformant:
-* XSD compliance
+* XML Schema compliance
 * Compliance with the documentation of the Model
+* Valid values are used for all the "enumeration" types where the list of allowed values is managed externally to the XML Schema
 * (optional) Compliance with this Best Practice Guidance
 * The children of `/Report/Profile/Items` and `/Report/ItemResults` comply with the corresponding QCItemDefinition instances in the EBU-hosted catalogue
+* Each child of `/Report/ItemResults` complies with the constraints of the corresponding child of `/Report/Profile/Items`
+  * For example, if an `Item` has a value of "check" for `UsedAs` then its corresponding `ItemResult` must have a `CheckResult` element
 * `/Report/ExecutionStatus` has the correct value when considering `/Report/ItemResults/ItemResult/ExecutionStatus` for all `ItemResult`s
 * `/Report/CheckResult` has the correct value when considering `/Report/ItemResults/ItemResult/CheckResult` for all `ItemResult`s
 
