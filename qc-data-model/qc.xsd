@@ -160,6 +160,7 @@
 			<xs:element minOccurs="0" name="AnalysisMethod" type="qc:AnalysisMethodType"> </xs:element>
 			<xs:element name="Description" type="xs:string" minOccurs="0"/>
 			<xs:element name="Definition" type="xs:string"/>
+			<xs:element name="CheckResultDefinition" type="xs:string" minOccurs="0"/>
 			<xs:element name="Remarks" type="xs:string" minOccurs="0"/>
 			<xs:element name="Layer" type="qc:LayerType"/>
 			<xs:element name="Category" type="qc:CategoryType"/>
