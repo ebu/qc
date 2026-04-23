@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:qc="tag:qc.ebu.ch,2026-01"
-	targetNamespace="tag:qc.ebu.ch,2026-01" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:qc="tag:qc.ebu.ch,2026-04"
+	targetNamespace="tag:qc.ebu.ch,2026-04" elementFormDefault="qualified">
 	<xs:annotation>
 		<xs:documentation>Class Instances</xs:documentation>
 	</xs:annotation>
