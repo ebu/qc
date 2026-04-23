@@ -229,7 +229,10 @@
 			<xs:element name="Name" type="qc:EBUQCIDType"/>
 			<xs:element name="Description" type="xs:string"/>
 			<xs:element name="Remarks" type="xs:string" minOccurs="0"/>
-			<xs:element name="HasLocator" type="xs:boolean" default="false"/>
+			<xs:element name="HasLocatorTemporal" type="xs:boolean"/>
+			<xs:element name="HasLocatorSpatial" type="xs:boolean"/>
+			<xs:element name="HasTrack" type="xs:boolean"/>
+			<xs:element name="HasWrapperLocation" type="xs:boolean"/>
 			<xs:element name="InReports" type="qc:CardinalityType"/>
 			<xs:element name="InChecks" type="qc:CardinalityType"/>
 			<xs:element name="DefaultValue" type="xs:string" minOccurs="0" nillable="true"/>
@@ -273,7 +276,10 @@
 			<xs:element name="Name" type="qc:EBUQCIDType"/>
 			<xs:element name="Description" type="xs:string"/>
 			<xs:element name="Remarks" type="xs:string" minOccurs="0"/>
-			<xs:element name="HasLocator" type="xs:boolean" default="false"/>
+			<xs:element name="HasLocatorTemporal" type="xs:boolean"/>
+			<xs:element name="HasLocatorSpatial" type="xs:boolean"/>
+			<xs:element name="HasTrack" type="xs:boolean"/>
+			<xs:element name="HasWrapperLocation" type="xs:boolean"/>
 			<xs:element name="InReports" type="qc:CardinalityType"/>
 			<xs:element name="InChecks" type="qc:CardinalityType"/>
 			<xs:element name="Aliases" minOccurs="0">
