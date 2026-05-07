@@ -220,7 +220,7 @@
 			<xs:element name="Locator" type="qc:LocatorType" minOccurs="0"/>
 			<xs:element name="Track" type="xs:string" minOccurs="0"/>
 			<xs:element name="WrapperLocation" type="qc:WrapperLocationType" minOccurs="0"/>
-			<xs:element name="Value" type="xs:string"/>
+			<xs:element name="Value"  minOccurs="0" type="xs:string"/>
 			<xs:element name="Input" type="qc:QCItemInputType" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="ExtensionProperties" type="qc:ExtensionPropertiesType" minOccurs="0"/>
 		</xs:sequence>
