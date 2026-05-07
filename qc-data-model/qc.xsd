@@ -236,11 +236,11 @@
 			<xs:element name="HasWrapperLocation" type="xs:boolean"/>
 			<xs:element name="InReports" type="qc:CardinalityType"/>
 			<xs:element name="InChecks" type="qc:CardinalityType"/>
-			<xs:element name="DefaultValue" type="xs:string" minOccurs="0" nillable="true"/>
-			<xs:element name="ValueRange" type="qc:RangeType" minOccurs="0" nillable="true"/>
-			<xs:element name="Type" type="qc:DatatypeType" minOccurs="0" nillable="true"/>
-			<xs:element name="Unit" type="qc:UnitType" minOccurs="0" nillable="true"/>
-			<xs:element name="Representation" type="qc:RepresentationType" minOccurs="0" nillable="true"/>
+			<xs:element name="DefaultValue" type="xs:string" minOccurs="0"/>
+			<xs:element name="ValueRange" type="qc:RangeType" minOccurs="0"/>
+			<xs:element name="Type" type="qc:DatatypeType" minOccurs="0"/>
+			<xs:element name="Unit" type="qc:UnitType" minOccurs="0"/>
+			<xs:element name="Representation" type="qc:RepresentationType" minOccurs="0"/>
 			<xs:element name="Input" type="qc:QCItemInputDefinitionType" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="ExtensionProperties" type="qc:ExtensionPropertiesType" minOccurs="0"/>
 		</xs:sequence>
@@ -288,10 +288,10 @@
 					<xs:list itemType="xs:anyURI"/>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="ValueRange" type="qc:RangeType" minOccurs="0" nillable="true"/>
-			<xs:element name="Type" type="qc:DatatypeType" minOccurs="0" nillable="true"/>
-			<xs:element name="Unit" type="qc:UnitType" minOccurs="0" nillable="true"/>
-			<xs:element name="Representation" type="qc:RepresentationType" minOccurs="0" nillable="true"/>
+			<xs:element name="ValueRange" type="qc:RangeType" minOccurs="0"/>
+			<xs:element name="Type" type="qc:DatatypeType" minOccurs="0"/>
+			<xs:element name="Unit" type="qc:UnitType" minOccurs="0"/>
+			<xs:element name="Representation" type="qc:RepresentationType" minOccurs="0"/>
 			<xs:element name="Output" type="qc:QCItemOutputDefinitionType" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="ExtensionProperties" type="qc:ExtensionPropertiesType" minOccurs="0"/>
 		</xs:sequence>
