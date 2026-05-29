@@ -11,6 +11,10 @@ The XML Schema and Class model for EBU QC Reports, QC Profiles and QC Item Defin
 
 ℹ️ A [**PDF of the latest qc-data-model.docx**](https://ebu.github.io/qc/qc-data-model/qc-data-model.pdf) is available (generated from the head of the "main" branch)
 
+## Timing Extension files
+
+* XML Schema for `TimingExtensionMediaPlaybackEditUnits` (refer to the documentation above for more details): [TimingExtensionMediaPlaybackEditUnits.xsd](TimingExtensionMediaPlaybackEditUnits.xsd)
+
 ## Class diagram
 
 The class diagram for the EBU QC data model is shown below (refer to the documentation above for more details).
