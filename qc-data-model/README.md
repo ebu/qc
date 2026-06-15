@@ -19,8 +19,6 @@ The XML Schema and Class model for EBU QC Reports, QC Profiles and QC Item Defin
 
 The class diagram for the EBU QC data model is shown below (refer to the documentation above for more details).
 
-Note: this diagram is an SVG containing embedded draw.io data meaning it can be edited at https://www.drawio.com/
-
 ![UML Class diagram](qc-data-model.uml_diagram.drawio.svg)
 
 ## Approach to versioning of qc.xsd
@@ -29,3 +27,8 @@ Note: this diagram is an SVG containing embedded draw.io data meaning it can be 
 * Use of the built-in extension mechanism is preferred over changing qc.xsd
 * If qc.xsd is ever changed then the XML namespace will be changed
 * The accompanying documentation, best practice guidance, etc are likely to change even if qc.xsd does not. Additionally, sets of use case specific constraints might be defined. The intention is to provide a mechanism to signal which of these resources/constraints (and which version) is being followed. This mechanism could be used in an XML document conforming to qc.xsd and would be separate to the XML namespace.
+
+## Editing SVG files
+
+Note: The SVG files contain embedded draw.io data meaning they can be edited at https://www.drawio.com/
+
