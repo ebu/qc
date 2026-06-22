@@ -19,7 +19,7 @@ The XML Schema and Class model for EBU QC Reports, QC Profiles and QC Item Defin
 
 The class diagram for the EBU QC data model is shown below (refer to the documentation above for more details).
 
-![UML Class diagram](qc-data-model.uml_diagram.drawio.svg)
+![UML Class diagram](images/qc-data-model.uml_diagram.drawio.svg)
 
 ## Approach to versioning of qc.xsd
 
