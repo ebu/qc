@@ -6,7 +6,10 @@ Resources to help developers implement support for interoperable EBU QC Report X
 
 ## Main files
 
+⚠️ **Some of these resources make use of Catalogue API v2 as implemented at [https://qc.ebu.io/](https://qc.ebu.io/). This repo defines Catalogue API v3. Support for API v3 is expected soon. See https://github.com/ebu/qc/issues/7**
+
 * **QC Report sample**: [qc-report-generic-sample.xml](qc-report-generic-sample.xml)
+  * This is valid with respect to the [compliance checklist](qc-reports-compliance-checklist.md) and the [Scenario 1 best practice](qc-reports-best-practice-guidance-1.md)
 * **Compliance checklist**: [qc-reports-compliance-checklist.md](qc-reports-compliance-checklist.md)
 * **Best practice guidance (Scenario 1)**: [qc-reports-best-practice-guidance-1.md](qc-reports-best-practice-guidance-1.md)
 * **QC Report inspector (experimental)**: `qc-report-inspector/`
