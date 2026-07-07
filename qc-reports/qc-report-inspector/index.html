@@ -30,9 +30,10 @@
                 </div>
             </div>
 
-            <div id="validation-output" class="alert alert-info d-none"></div>
-            <div id="results" class="d-none pt-4 bd-example m-0 border-0">
+            <div id="validation-output" class="d-none p-3 card">
+            </div>
 
+            <div id="results" class="d-none pt-4 bd-example m-0 border-0">
             </div>
 
         </main>
@@ -99,10 +100,18 @@
             </div>
         </div>
     </template>
+    <template id="template-item-result-card">
+        <div class="card p-3">
+            <div class="row my-5">
+                <div class="col-4"></div>
+                <div class="col-8"></div>
+            </div>
+        </div>
+    </template>
     <template id="template-dropdown">
         <div class="dropdown pb-3">
             <button class="btn btn-outline-secondary dropdown-toggle btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Outputs with temporal locators
+                Outputs with temporal positioning statements
             </button>
             <ul class="dropdown-menu">
             </ul>
