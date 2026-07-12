@@ -21,11 +21,18 @@
         <main>
             <div class="card">
                 <div class="card-body">
-                    <p style="margin-bottom: 0">This tool loads an EBU QC Report XML file and demonstrates the benefits of using this format, such as:</p>
+                    <p style="margin-bottom: 0"><span class="badge rounded-pill text-bg-light">function</span>This tool loads an EBU QC Report XML file and demonstrates the benefits of using this format, such as:</p>
                     <ul>
                         <li>A custom view can be created for each workflow role that shows only the required details</li>
                         <li>QC Reports from all QC tools are presented uniformly</li>
                     </ul>
+                    <p><span class="badge rounded-pill text-bg-light">github</span>This tool is part of the <a href="https://github.com/ebu/qc">EBU QC GitHub repository</a> which also contains the EBU QC data model and Catalogue API specifications, as well as implementation resources and issue reporting</p>
+
+                    <p><span class="badge rounded-pill text-bg-light">xml</span>This tool only supports EBU QC Report XML files with the following XML namespace:</p>
+                    <pre><code id="support-xml"></code></pre>
+                    <p><span class="badge rounded-pill text-bg-light">api</span>The Catalogue API used is:</p>
+                    <pre><code id="support-api"></code></pre>
+
                     <button id="open_report_button" type="button" class="btn btn-outline-secondary" disabled>Open report</button>
                 </div>
             </div>
@@ -96,7 +103,7 @@
 
             </div>
             <div class="tab-pane" id="nav-3" role="tabpanel" aria-labelledby="nav-3-tab">
-
+                <textarea rows="30" id="eng-text" class="form-control" readonly></textarea>
             </div>
         </div>
     </template>

@@ -1,6 +1,8 @@
 import * as xmllint from "./node_modules/xmllint-wasm/index-browser.mjs";
 
+const catalogue_api_prefix = "https://qc.ebu.io/api/v2";
 let xsd_text = "";
+const parser = new DOMParser();
 
 async function validateXMLDoc(xml, schema) {
     try{
@@ -9,12 +11,12 @@ async function validateXMLDoc(xml, schema) {
             {
                 xml: { fileName: "qc_report_xml_file", contents: xml },
                 schema: schema,
-                normalization: 'format'
+                normalization: "format"
             });
         return { valid, rawOutput, normalized };
 
     } catch(error){
-        return { valid: false, rawOutput: error.message, normalized:''};
+        return { valid: false, rawOutput: error.message, normalized:""};
     }
 	
 }
@@ -120,7 +122,6 @@ async function processDoc() {
     } 
     validationMessage("XSD Validation successful", `qc.xsd only; any extensions not validated<br/>Raw Output: ${rawOutput}`, "success");
 
-    const parser = new DOMParser();
     const xml_doc = parser.parseFromString(xml_doc_text, "text/xml");
 
     /////////////////////////////////////////
@@ -209,7 +210,7 @@ async function processDoc() {
         }
         
         // Fetch from the Catalogue API
-        const item_def_api_url = `https://qc.ebu.io/api/v2/items/${item_id}/versions/${item_version}`;
+        const item_def_api_url = `${catalogue_api_prefix}/items/${item_id}/versions/${item_version}`;
         fetch(item_def_api_url)
         .then((response) => {
             if (!response.ok) {
@@ -246,7 +247,6 @@ async function processDoc() {
     }
     
     // Engineer tab
-    eng_div.insertAdjacentHTML("beforeend", `<textarea rows="30" id="eng-text" class="form-control" readonly></textarea>`);
     document.querySelector("#eng-text").value = normalized;
     
     // Show report details
@@ -254,11 +254,11 @@ async function processDoc() {
 
 }
 
-window.addEventListener('error', e => {
+window.addEventListener("error", e => {
     window.alert("Unknown error. Make sure that the XML document has all the XML elements required by the latest design.");
 });
 
-window.addEventListener('unhandledrejection', e => {
+window.addEventListener("unhandledrejection", e => {
     window.alert("Unknown error. Make sure that the XML document has all the XML elements required by the latest design.");
   })
 
@@ -271,12 +271,15 @@ fetch("../../qc-data-model/qc.xsd")
   })
   .then((text) => {
     xsd_text = text;
+    const xsd_doc = parser.parseFromString(xsd_text, "text/xml");
+    const xsd_doc_targetNamespace = xsd_doc.documentElement.getAttribute("targetNamespace");
+    
+    document.querySelector("#support-xml").insertAdjacentHTML("beforeend", xsd_doc_targetNamespace);
+    document.querySelector("#support-api").insertAdjacentHTML("beforeend", catalogue_api_prefix);
 
-    const ToolInformationModal = document.getElementById('ToolInformationModal');
-    ToolInformationModal.addEventListener('show.bs.modal', event => {
-        // Button that triggered the modal
-        const button = event.relatedTarget;
-
+    const ToolInformationModal = document.querySelector("#ToolInformationModal");
+    ToolInformationModal.addEventListener("show.bs.modal", event => {
+        const button = event.relatedTarget;  // Button that triggered the modal
         ToolInformationModal.querySelector("#TIM-a").value = button.getAttribute("data-bs-a");
         ToolInformationModal.querySelector("#TIM-b").value = button.getAttribute("data-bs-b");
         ToolInformationModal.querySelector("#TIM-c").value = button.getAttribute("data-bs-c");
@@ -288,5 +291,5 @@ fetch("../../qc-data-model/qc.xsd")
     document.querySelector("#open_report_button").removeAttribute("disabled");
   })
   .catch((error) => {
-    document.querySelector("#open_report_button").insertAdjacentHTML("afterend", `<div class="alert alert-danger" role="alert">Fatal error. Unable to load Schema (XSD) for QC reports. ${error}</div>`);
+    document.querySelector("#open_report_button").insertAdjacentHTML("afterend", `<div class="alert alert-danger" role="alert">Fatal error. Unable to load and/or parse Schema (XSD) for QC Reports. ${error}</div>`);
   });
