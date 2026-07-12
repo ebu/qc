@@ -11,11 +11,15 @@ The XML Schema and Class model for EBU QC Reports, QC Profiles and QC Item Defin
 
 ℹ️ A [**PDF of the latest qc-data-model.docx**](https://ebu.github.io/qc/qc-data-model/qc-data-model.pdf) is available (generated from the head of the "main" branch)
 
+## Timing Extension files
+
+* XML Schema for `TimingExtensionMediaPlaybackEditUnits` (refer to the documentation above for more details): [TimingExtensionMediaPlaybackEditUnits.xsd](TimingExtensionMediaPlaybackEditUnits.xsd)
+
 ## Class diagram
 
 The class diagram for the EBU QC data model is shown below (refer to the documentation above for more details).
 
-![UML Class diagram](qc-data-model.uml_diagram.drawio.svg)
+![UML Class diagram](images/qc-data-model.uml_diagram.drawio.svg)
 
 ## Approach to versioning of qc.xsd
 
@@ -23,3 +27,8 @@ The class diagram for the EBU QC data model is shown below (refer to the documen
 * Use of the built-in extension mechanism is preferred over changing qc.xsd
 * If qc.xsd is ever changed then the XML namespace will be changed
 * The accompanying documentation, best practice guidance, etc are likely to change even if qc.xsd does not. Additionally, sets of use case specific constraints might be defined. The intention is to provide a mechanism to signal which of these resources/constraints (and which version) is being followed. This mechanism could be used in an XML document conforming to qc.xsd and would be separate to the XML namespace.
+
+## Editing SVG files
+
+Note: The SVG files contain embedded draw.io data meaning they can be edited at https://www.drawio.com/
+

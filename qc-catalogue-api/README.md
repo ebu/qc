@@ -4,6 +4,8 @@
 
 Specification of an API for querying a catalogue of EBU QC Item Definitions (as implemented at [https://qc.ebu.io/](https://qc.ebu.io/))
 
+⚠️ **These files define API v3 whereas API v2 is implemented at [https://qc.ebu.io/](https://qc.ebu.io/). v3 support is expected soon. See https://github.com/ebu/qc/issues/7**
+
 ## Main files
 
 * **XML Schema** for catalogue API responses: [qc-catalogue-api-schema.xsd](qc-catalogue-api-schema.xsd)

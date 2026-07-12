@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:qc="tag:qc.ebu.ch,2026-01"
-	targetNamespace="tag:qc.ebu.ch,2026-01" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:qc="tag:qc.ebu.ch,2026-04"
+	targetNamespace="tag:qc.ebu.ch,2026-04" elementFormDefault="qualified">
 	<xs:annotation>
 		<xs:documentation>Class Instances</xs:documentation>
 	</xs:annotation>
@@ -103,10 +103,9 @@
 			</xs:element>
 			<xs:element name="Inputs">
 				<xs:complexType>
-					<xs:choice minOccurs="0" maxOccurs="unbounded">
-						<xs:element name="Input" type="qc:QCItemInputValueType"/>
-						<xs:element name="Group" type="qc:QCItemInputGroupType"/>
-					</xs:choice>
+					<xs:sequence>
+						<xs:element name="Input" type="qc:QCItemInputType" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
 			<xs:element name="ExtensionProperties" type="qc:ExtensionPropertiesType" minOccurs="0"/>
@@ -134,10 +133,9 @@
 			<xs:element name="Operator" type="qc:OperatorType" minOccurs="0"/>
 			<xs:element name="Outputs">
 				<xs:complexType>
-					<xs:choice minOccurs="0" maxOccurs="unbounded">
-						<xs:element name="Output" type="qc:QCItemOutputValueType"/>
-						<xs:element name="Group" type="qc:QCItemOutputGroupType"/>
-					</xs:choice>
+					<xs:sequence>
+						<xs:element name="Output" type="qc:QCItemOutputType" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
 			<xs:element name="ExtensionProperties" type="qc:ExtensionPropertiesType" minOccurs="0"/>
@@ -162,6 +160,7 @@
 			<xs:element minOccurs="0" name="AnalysisMethod" type="qc:AnalysisMethodType"> </xs:element>
 			<xs:element name="Description" type="xs:string" minOccurs="0"/>
 			<xs:element name="Definition" type="xs:string"/>
+			<xs:element name="CheckResultDefinition" type="xs:string" minOccurs="0"/>
 			<xs:element name="Remarks" type="xs:string" minOccurs="0"/>
 			<xs:element name="Layer" type="qc:LayerType"/>
 			<xs:element name="Category" type="qc:CategoryType"/>
@@ -200,170 +199,102 @@
 			</xs:element>
 			<xs:element name="Inputs">
 				<xs:complexType>
-					<xs:choice minOccurs="0" maxOccurs="unbounded">
-						<xs:element name="Input" type="qc:QCItemInputValueDefinitionType"/>
-						<xs:element name="Group" type="qc:QCItemInputGroupDefinitionType"/>
-					</xs:choice>
+					<xs:sequence>
+						<xs:element name="Input" type="qc:QCItemInputDefinitionType" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
 			<xs:element name="Outputs">
 				<xs:complexType>
-					<xs:choice minOccurs="0" maxOccurs="unbounded">
-						<xs:element name="Output" type="qc:QCItemOutputValueDefinitionType"/>
-						<xs:element name="Group" type="qc:QCItemOutputGroupDefinitionType"/>
-					</xs:choice>
+					<xs:sequence>
+						<xs:element name="Output" type="qc:QCItemOutputDefinitionType" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
 			<xs:element name="ExtensionProperties" type="qc:ExtensionPropertiesType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="QCItemInputType" abstract="true">
+	<xs:complexType name="QCItemInputType">
 		<xs:sequence>
 			<xs:element name="Name" type="qc:EBUQCIDType"/>
 			<xs:element name="Locator" type="qc:LocatorType" minOccurs="0"/>
 			<xs:element name="Track" type="xs:string" minOccurs="0"/>
 			<xs:element name="WrapperLocation" type="qc:WrapperLocationType" minOccurs="0"/>
+			<xs:element name="Value"  minOccurs="0" type="xs:string"/>
+			<xs:element name="Input" type="qc:QCItemInputType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="ExtensionProperties" type="qc:ExtensionPropertiesType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="QCItemInputValueType">
-		<xs:complexContent>
-			<xs:extension base="qc:QCItemInputType">
-				<xs:sequence>
-					<xs:element name="Value" type="xs:string"/>
-					<xs:element name="ExtensionProperties" type="qc:ExtensionPropertiesType" minOccurs="0"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="QCItemInputGroupType">
-		<xs:complexContent>
-			<xs:extension base="qc:QCItemInputType">
-				<xs:sequence>
-					<xs:element name="Input" type="qc:QCItemInputValueType" maxOccurs="unbounded"/>
-					<xs:element name="ExtensionProperties" type="qc:ExtensionPropertiesType" minOccurs="0"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="QCItemInputDefinitionType" abstract="true">
+	<xs:complexType name="QCItemInputDefinitionType">
 		<xs:sequence>
 			<xs:element name="Name" type="qc:EBUQCIDType"/>
 			<xs:element name="Description" type="xs:string"/>
 			<xs:element name="Remarks" type="xs:string" minOccurs="0"/>
-			<xs:element name="HasLocator" type="xs:boolean" default="false"/>
+			<xs:element name="HasLocatorTemporal" type="xs:boolean"/>
+			<xs:element name="HasLocatorSpatial" type="xs:boolean"/>
+			<xs:element name="HasTrack" type="xs:boolean"/>
+			<xs:element name="HasWrapperLocation" type="xs:boolean"/>
 			<xs:element name="InReports" type="qc:CardinalityType"/>
 			<xs:element name="InChecks" type="qc:CardinalityType"/>
+			<xs:element name="DefaultValue" type="xs:string" minOccurs="0"/>
+			<xs:element name="ValueRange" type="qc:RangeType" minOccurs="0"/>
+			<xs:element name="Type" type="qc:DatatypeType" minOccurs="0"/>
+			<xs:element name="Unit" type="qc:UnitType" minOccurs="0"/>
+			<xs:element name="Representation" type="qc:RepresentationType" minOccurs="0"/>
+			<xs:element name="Input" type="qc:QCItemInputDefinitionType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="ExtensionProperties" type="qc:ExtensionPropertiesType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="QCItemInputValueDefinitionType">
-		<xs:complexContent>
-			<xs:extension base="qc:QCItemInputDefinitionType">
-				<xs:sequence>
-					<xs:element name="DefaultValue" type="xs:string" minOccurs="0" nillable="true"/>
-					<xs:element name="ValueRange" type="qc:RangeType" minOccurs="0" nillable="true"/>
-					<xs:element name="Type" type="qc:DatatypeType" minOccurs="0" nillable="true"/>
-					<xs:element name="Unit" type="qc:UnitType" minOccurs="0" nillable="true"/>
-					<xs:element name="Representation" type="qc:RepresentationType" minOccurs="0" nillable="true"/>
-					<xs:element name="ExtensionProperties" type="qc:ExtensionPropertiesType" minOccurs="0"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="QCItemInputGroupDefinitionType">
-		<xs:complexContent>
-			<xs:extension base="qc:QCItemInputDefinitionType">
-				<xs:sequence>
-					<xs:element name="Input" type="qc:QCItemInputValueDefinitionType"
-						maxOccurs="unbounded"/>
-					<xs:element name="ExtensionProperties" type="qc:ExtensionPropertiesType" minOccurs="0"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="QCItemOutputType" abstract="true">
+	<xs:complexType name="QCItemOutputType">
 		<xs:sequence>
 			<xs:element name="Name" type="qc:EBUQCIDType"/>
 			<xs:element name="Locator" type="qc:LocatorType" minOccurs="0"/>
 			<xs:element name="Track" type="xs:string" minOccurs="0"/>
 			<xs:element name="WrapperLocation" type="qc:WrapperLocationType" minOccurs="0"/>
+			<xs:element name="Value" minOccurs="0" type="xs:string"/>
+			<xs:element name="Annotation" type="qc:AnnotationType" minOccurs="0"/>
+			<xs:element name="VerificationMedia" type="xs:anyURI" minOccurs="0"/>
+			<xs:element name="Confidence" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:minInclusive value="0"/>
+						<xs:maxInclusive value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Severity" type="qc:SeverityType" minOccurs="0"/>
+			<xs:element name="Aliases" minOccurs="0">
+				<xs:simpleType>
+					<xs:list itemType="xs:anyURI"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Output" type="qc:QCItemOutputType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="ExtensionProperties" type="qc:ExtensionPropertiesType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="QCItemOutputValueType">
-		<xs:complexContent>
-			<xs:extension base="qc:QCItemOutputType">
-				<xs:sequence>
-					<xs:element name="Value" minOccurs="0" type="xs:string"> </xs:element>
-					<xs:element name="Annotation" type="qc:AnnotationType" minOccurs="0"/>
-					<xs:element name="VerificationMedia" type="xs:anyURI" minOccurs="0"/>
-					<xs:element name="Confidence" minOccurs="0">
-						<xs:simpleType>
-							<xs:restriction base="xs:decimal">
-								<xs:minInclusive value="0"/>
-								<xs:maxInclusive value="1"/>
-							</xs:restriction>
-						</xs:simpleType>
-					</xs:element>
-					<xs:element name="Severity" type="qc:SeverityType" minOccurs="0"/>
-					<xs:element minOccurs="0" name="Aliases">
-						<xs:simpleType>
-							<xs:list itemType="xs:anyURI"/>
-						</xs:simpleType>
-					</xs:element>
-					<xs:element name="ExtensionProperties" type="qc:ExtensionPropertiesType" minOccurs="0"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="QCItemOutputGroupType">
-		<xs:complexContent>
-			<xs:extension base="qc:QCItemOutputType">
-				<xs:sequence>
-					<xs:element name="Output" type="qc:QCItemOutputValueType" maxOccurs="unbounded"
-					/>
-					<xs:element name="ExtensionProperties" type="qc:ExtensionPropertiesType" minOccurs="0"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="QCItemOutputDefinitionType" abstract="true">
+	<xs:complexType name="QCItemOutputDefinitionType">
 		<xs:sequence>
 			<xs:element name="Name" type="qc:EBUQCIDType"/>
 			<xs:element name="Description" type="xs:string"/>
 			<xs:element name="Remarks" type="xs:string" minOccurs="0"/>
-			<xs:element name="HasLocator" type="xs:boolean" default="false"/>
+			<xs:element name="HasLocatorTemporal" type="xs:boolean"/>
+			<xs:element name="HasLocatorSpatial" type="xs:boolean"/>
+			<xs:element name="HasTrack" type="xs:boolean"/>
+			<xs:element name="HasWrapperLocation" type="xs:boolean"/>
 			<xs:element name="InReports" type="qc:CardinalityType"/>
 			<xs:element name="InChecks" type="qc:CardinalityType"/>
+			<xs:element name="Aliases" minOccurs="0">
+				<xs:simpleType>
+					<xs:list itemType="xs:anyURI"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ValueRange" type="qc:RangeType" minOccurs="0"/>
+			<xs:element name="Type" type="qc:DatatypeType" minOccurs="0"/>
+			<xs:element name="Unit" type="qc:UnitType" minOccurs="0"/>
+			<xs:element name="Representation" type="qc:RepresentationType" minOccurs="0"/>
+			<xs:element name="Output" type="qc:QCItemOutputDefinitionType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="ExtensionProperties" type="qc:ExtensionPropertiesType" minOccurs="0"/>
 		</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="QCItemOutputValueDefinitionType">
-		<xs:complexContent>
-			<xs:extension base="qc:QCItemOutputDefinitionType">
-				<xs:sequence>
-					<xs:element name="Aliases" minOccurs="0">
-						<xs:simpleType>
-							<xs:list itemType="xs:anyURI"/>
-						</xs:simpleType>
-					</xs:element>
-					<xs:element name="ValueRange" type="qc:RangeType" minOccurs="0" nillable="true"/>
-					<xs:element name="Type" type="qc:DatatypeType" minOccurs="0" nillable="true"/>
-					<xs:element name="Unit" type="qc:UnitType" minOccurs="0" nillable="true"/>
-					<xs:element name="Representation" type="qc:RepresentationType" minOccurs="0" nillable="true"
-					/>
-					<xs:element name="ExtensionProperties" type="qc:ExtensionPropertiesType" minOccurs="0"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="QCItemOutputGroupDefinitionType">
-		<xs:complexContent>
-			<xs:extension base="qc:QCItemOutputDefinitionType">
-				<xs:sequence>
-					<xs:element name="Output" type="qc:QCItemOutputValueDefinitionType"
-						maxOccurs="unbounded"/>
-					<xs:element name="ExtensionProperties" type="qc:ExtensionPropertiesType" minOccurs="0"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
 	</xs:complexType>
 	<xs:annotation>
 		<xs:documentation>Structure Definitions</xs:documentation>

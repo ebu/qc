@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:qcet="tag:qc.ebu.ch,2026-04:extensions:timing"
+	targetNamespace="tag:qc.ebu.ch,2026-04:extensions:timing" elementFormDefault="qualified">
+	<xs:element name="TimingExtensionMediaPlaybackEditUnits" type="qcet:TimingExtensionMediaPlaybackEditUnitsType"/>
+	<xs:complexType name="TimingExtensionMediaPlaybackEditUnitsType">
+		<xs:sequence>
+			<xs:element name="EditRate" type="qcet:EditRateType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="EditRateType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([1-9]\d*)/([1-9]\d*)"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
